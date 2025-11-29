@@ -1,60 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Css Variables</title>
     <style>
+      /* Define CSS variables for colors, padding, and default opacity */
+      :root {
+        --color: rgb(255, 0, 247);
+        --seccolor: rgb(231, 164, 246);
+        --defpad: 23px;
+        --defop: 0.4;
+      }
 
-        :root{
-            --color: rgb(255, 0, 247);
-            --seccolor: rgb(231, 164, 246); 
-            --defpad: 23px;
-            --defop: 0.4;
-        }
+      /* Reset default margin and padding for all elements */
+      * {
+        margin: 0;
+        padding: 0;
+      }
 
-        *{
-            margin: 0;
-            padding: 0;
-        }
-       .nav{
-            background-color: var(--color);
-        }
+      /* Navigation bar styling using primary color variable */
+      .nav {
+        background-color: var(--color);
+      }
 
-        ul{
-            display: flex;
-        }
+      /* Make navigation list horizontal using flexbox */
+      ul {
+        display: flex;
+      }
 
-        ul li{
-            opacity: var(--defop);
-            list-style: none;
-            padding: var(--defpad);
-            border: 2px solid var(--seccolor);
-        }
+      /* Style each list item with padding, border, and default opacity */
+      ul li {
+        opacity: var(--defop); /* Set default transparency for list items */
+        list-style: none; /* Remove default bullet points */
+        padding: var(--defpad); /* Apply consistent padding from CSS variable */
+        border: 2px solid var(--seccolor); /* Use secondary color for border */
+      }
 
-        ul li:first-child{
-            --color: rgb(243, 87, 8);
-            background-color: var(--color, blue);
-        }
+      /* Style the first list item differently */
+      ul li:first-child {
+        --color: rgb(243, 87, 8); /* Override color variable locally */
+        background-color: var(
+          --color,
+          blue
+        ); /* Use overridden color, fallback to blue */
+      }
 
-        .container{
-            background-color: var(--seccolor);
-        }
-
+      /* Main container styling using secondary color variable */
+      .container {
+        background-color: var(--seccolor);
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="nav">
-        <ul>
-            <li>Home</li>
-            <li>About </li>
-            <li>Contact</li>
-        </ul>
+      <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
     </div>
-    
 
+    <!-- Content section styled with secondary color -->
     <div class="container">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse assumenda qui ad dolorem consequuntur facilis aliquam. Unde sapiente ipsam quaerat, at debitis nesciunt, totam nulla quae ad ipsum veniam sed eligendi rem deserunt quos maiores modi. Illo eaque expedita natus iusto nostrum dolorem quos est.
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse assumenda
+      qui ad dolorem consequuntur facilis aliquam. Unde sapiente ipsam quaerat,
+      at debitis nesciunt, totam nulla quae ad ipsum veniam sed eligendi rem
+      deserunt quos maiores modi. Illo eaque expedita natus iusto nostrum
+      dolorem quos est.
     </div>
-</body>
+  </body>
 </html>
