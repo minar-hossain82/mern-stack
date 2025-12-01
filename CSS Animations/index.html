@@ -1,64 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS Animations</title>
     <style>
-        .container{
-            background-color: rgb(9, 106, 106);
-            height: 80vh;
-            width: 30vw;
-        }
+      /* Container div to hold the box */
+      .container {
+        background-color: rgb(9, 106, 106); /* Dark teal background */
+        height: 80vh; /* 80% of viewport height */
+        width: 30vw; /* 30% of viewport width */
+      }
 
-        .box{
-            width: 34px;
-            height: 45px; 
-            /* animation-name: harryKaAnimation; 
-            animation-duration: 1s;
-            animation-iteration-count: infinite;
-            animation-timing-function: cubic-bezier(0, 0, 0, 0.96);
-            animation-delay: 1s;
-            animation-direction: reverse;
-            animation-play-state: paused; */
-            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
-            animation: harryKaAnimation 2s ease-in-out 3s 1, 
-                       harry2 3s ease-in-out 3s 1;
-        }
+      /* The animated box inside the container */
+      .box {
+        width: 34px; /* Box width */
+        height: 45px; /* Box height */
 
-        @keyframes harryKaAnimation {
-            from{
-                background-color: red;
-            }
-            to{
-                background-color: yellow; 
-            }
-        }
+        /* Multiple animations applied to the box */
+        /* Format: animation: name duration timing-function delay iteration-count direction fill-mode; */
+        animation: harryKaAnimation 2s ease-in-out 3s 1,
+          /* First animation: color change */ harry2 3s ease-in-out 3s 1; /* Second animation: rotation */
+      }
 
-        @keyframes harry2 {
-            0%{
-                transform: rotate(100deg);
-            }
-            20%{
-                transform: rotate(200deg);
-            }
-            50%{
-                transform: rotate(220deg);
-            }
-            80%{
-                transform: rotate(300deg);
-            }
-            100%{
-                transform: rotate(310deg);
-            }
+      /* Animation for changing background color */
+      @keyframes harryKaAnimation {
+        from {
+          background-color: red; /* Start with red */
         }
+        to {
+          background-color: yellow; /* End with yellow */
+        }
+      }
+
+      /* Animation for rotating the box */
+      @keyframes harry2 {
+        0% {
+          transform: rotate(100deg); /* Start at 100 degrees */
+        }
+        20% {
+          transform: rotate(200deg); /* Rotate to 200 degrees */
+        }
+        50% {
+          transform: rotate(220deg); /* Rotate to 220 degrees */
+        }
+        80% {
+          transform: rotate(300deg); /* Rotate to 300 degrees */
+        }
+        100% {
+          transform: rotate(310deg); /* End at 310 degrees */
+        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
+    <!-- Main container -->
     <div class="container">
-        <div class="box">
-            Box
-        </div>
+      <!-- Box that will animate -->
+      <div class="box">Box</div>
     </div>
-</body>
+  </body>
 </html>
