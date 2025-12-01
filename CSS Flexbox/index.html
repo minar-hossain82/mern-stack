@@ -1,76 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS Flexbox</title>
+
     <style>
-        .container {
-            border: 2px solid red;
-            display: flex;
-            height: 80vh;
-            /* justify-content: center; */
-            align-items: center;
-            /* flex-direction: column; */
-            flex-wrap: wrap;
-            /* align-content: flex-start; */
-            /* there is no justify-items  in flexbox; */
-            flex-flow: row wrap;
-            /* gap: 30px; 
-            row-gap: 40px;
-            column-gap: 10px; */
-            gap: 40px 10px;
+      /* Main flex container */
+      .container {
+        border: 2px solid red;
 
-        }
+        /* Flexbox active */
+        display: flex;
 
-        .item {  
-            /* flex-grow: 1; */
-            height: 92px;
-            width: 92px;
-            border: 2px solid black;
-            /* margin: 4px; */
-            background-color: blueviolet;
-        }
+        height: 80vh;
 
-        .order-1{
-            order: 1;
-        }
-        .order-2{
-            order: 2;
-        }
-        .order-3{
-            order: 3;
-        }
+        /* Align items vertically (cross-axis) */
+        align-items: center;
 
-        .item1{  
-            /* flex-grow: 2; */
-            /* flex-shrink: 2; */
-            align-self: flex-end;
-        }
+        /* Allow items to move to new line */
+        flex-wrap: wrap;
+
+        /* flex-direction + flex-wrap shortcut */
+        flex-flow: row wrap;
+
+        /* row-gap (40px) + column-gap (10px) */
+        gap: 40px 10px;
+      }
+
+      /* All flex items */
+      .item {
+        height: 92px;
+        width: 92px;
+        border: 2px solid black;
+        background-color: blueviolet;
+      }
+
+      /* Custom item order (changes position) */
+      .order-1 {
+        order: 1;
+      }
+
+      .order-2 {
+        order: 2;
+      }
+
+      .order-3 {
+        order: 3;
+      }
+
+      /* Single item overriding alignment */
+      .item1 {
+        /* Align only this item at bottom of container */
+        align-self: flex-end;
+      }
     </style>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <main>
-        <div class="container">
-            <div class="item item1">1</div>
-            <div class="item">2</div>
-            <div class="item">3</div>
-            <div class="item order-1">4</div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            
-         
-        </div>
+      <div class="container">
+        <!-- Item with custom align-self -->
+        <div class="item item1">1</div>
+
+        <!-- Normal items -->
+        <div class="item">2</div>
+        <div class="item">3</div>
+
+        <!-- Item with order change -->
+        <div class="item order-1">4</div>
+
+        <!-- Remaining items -->
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
     </main>
-
-</body>
-
+  </body>
 </html>
