@@ -1,52 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fonts</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fonts</title> 
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Poppins:wght@300&display=swap');
-        h1 {
-            font-family: 'Poppins', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
-        }
+      /* Importing Google Fonts (Poppins & Baloo Bhai 2) */
+      @import url("https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Poppins:wght@300&display=swap");
 
-        p {
-            /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
-            font-family: 'Baloo Bhai 2', sans-serif;
-            font-size: 20px; 
-            /* font-style:italic;
-            font-weight: 500;  */
-            
-        }
-        h2{
-            text-align: center;
-            text-transform: uppercase;
-            text-decoration: underline;
-            text-decoration-color: blue;
-            /* text-decoration-style: dotted; */
-            text-decoration-thickness: 7px ;
-            /* text-indent: 45px; */
-        }
-        .lorem{
-            border: 2px solid red;
-            width: 145px;
-            word-break: break-all;
-            /* text-overflow: ellipsis;
-            overflow: hidden; */
+      /* Heading 1 styling */
+      h1 {
+        font-family: "Poppins", "Lucida Sans", "Lucida Sans Regular",
+          "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif; /* Primary: Poppins, fallback: safe fonts */
+      }
 
-        }
+      /* Paragraph styling */
+      p {
+        /* Example of alternative font (commented out): */
+        /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+
+        font-family: "Baloo Bhai 2", sans-serif; /* Applying imported font */
+        font-size: 20px; /* Text size */
+        /* font-style: italic;                    → Tilted text */
+        /* font-weight: 500;                      → Medium boldness */
+      }
+
+      /* Heading 2 styling */
+      h2 {
+        text-align: center; /* Centers the text */
+        text-transform: uppercase; /* Converts all letters to uppercase */
+        text-decoration: underline; /* Adds underline */
+        text-decoration-color: blue; /* Underline color */
+        /* text-decoration-style: dotted;*/ /* Different underline style */
+        text-decoration-thickness: 7px; /* Underline thickness */
+        /* text-indent: 45px;            → Indents first line */
+      }
+
+      /* Special paragraph with long text */
+      .lorem {
+        border: 2px solid red; /* Border around the paragraph */
+        width: 145px; /* Restrict width of the text box */
+        word-break: break-all; /* Breaks words anywhere to avoid overflow */
+
+        /* Below are optional text overflow controls */
+        /* text-overflow: ellipsis; -> Shows "..." at overflow */
+        /* overflow: hidden;        -> Hides overflowing text */
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <div>
-        <!-- https://codepen.io/web-dot-dev/pen/yLojraG -->
-        <h1>Fonts</h1>
-        <h2>about Fonts</h2>
-        <p>This is a video on fonts</p>
-        <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos sequi accusamus quas itaque molestias dolorem quisquam quod, adipisci maxime dolore, mollitia illo officia deserunt voluptatem iure qui. Fugit aliquam possimus aperiam commodi eum amet veniam at vel. Necessitatibus asperiores eos amet laborum dolor, ipsum porro!</p>
-    </div>
-</body>
+      <!-- Example font playground link -->
+      <!-- https://codepen.io/web-dot-dev/pen/yLojraG -->
 
+      <h1>Fonts</h1>
+      <h2>about Fonts</h2>
+
+      <!-- Normal paragraph -->
+      <p>This is a video on fonts</p>
+
+      <!-- Paragraph with long text to demonstrate word-break effect -->
+      <p class="lorem">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos sequi
+        accusamus quas itaque molestias dolorem quisquam quod, adipisci maxime
+        dolore, mollitia illo officia deserunt voluptatem iure qui. Fugit
+        aliquam possimus aperiam commodi eum amet veniam at vel. Necessitatibus
+        asperiores eos amet laborum dolor, ipsum porro!
+      </p>
+    </div>
+  </body>
 </html>
