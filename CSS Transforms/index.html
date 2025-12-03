@@ -1,46 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Sets character encoding to UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Makes the layout responsive -->
     <title>Css Transform</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
+      * {
+        margin: 0; /* Removes default margin from all elements */
+        padding: 0; /* Removes default padding from all elements */
+      }
 
-        .box {
-            height: 50px;
-            width: 50px;
-            background-color: beige;
-            border: 2px solid black;
-            transform: rotate(0.125turn);
-            transform-origin: -50% -50%;
-            /* transform: rotateZ(9deg); */
-            /* transform: skewY(34deg); */
-            /* transform: translateY(100%) skewX(40deg) translateX(45%); */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+      .box {
+        height: 50px; /* Box height */
+        width: 50px; /* Box width */
+        background-color: beige; /* Background color of the box */
+        border: 2px solid black; /* Box border */
 
-        .container {
-            margin: 55px;
-            width: 100vw;
-            height: 80vh;
-            border: 2px solid purple;
-        }
+        transform: rotate(
+          0.125turn
+        ); /* Rotates the box by 0.125 of a full turn (45 degrees) */
+        transform-origin: -50% -50%; /* Sets pivot point outside the box, causing unusual rotation */
+
+        /* Other transform examples: */
+        /* transform: rotateZ(9deg); */
+        /* transform: skewY(34deg); */
+        /* transform: translateY(100%) skewX(40deg) translateX(45%); */
+
+        display: flex; /* Enables flexbox to center text inside */
+        justify-content: center; /* Centers horizontally */
+        align-items: center; /* Centers vertically */
+      }
+
+      .container {
+        margin: 55px; /* Adds outer spacing */
+        width: 100vw; /* Full viewport width */
+        height: 80vh; /* 80% of viewport height */
+        border: 2px solid purple; /* Border around container */
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="container">
-        <div class="box">
-            box
-        </div>
+      <!-- Main container wrapping the box -->
+      <div class="box">
+        <!-- The box being transformed -->
+        box
+      </div>
     </div>
-</body>
-
+  </body>
 </html>
