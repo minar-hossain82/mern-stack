@@ -1,13 +1,17 @@
 {
-  "name": "video-87",
-  "version": "1.0.0",
-  "description": "",
-  "main": "main.js",
-  "type":"module",
+  "name": "video-87",              // The name of your project or package
+  "version": "1.0.0",              // Version number of your project
+  "description": "",               // Short description of the project
+  "main": "main.js",               // Entry file for your application
+  "type": "module",                // Enables ES modules (import/export syntax)
+  
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1"  
+    // Script that runs when you type 'npm test'
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+
+  "keywords": [],                  // Keywords to help others discover your package
+  "author": "",                    // Author name (you can add yours)
+  "license": "ISC"                 // License type for the project
 }
+
