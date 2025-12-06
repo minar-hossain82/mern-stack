@@ -1,27 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS</title>
-    <style>
-        div, span {
-            color: red;
-            background-color: yellow;
-        }
-    </style>
-</head>
-<body>
-    <div>
-        Hey I am harry and today I am in CSS Mood
-    </div>
 
-    <div>
-        I am good
-    </div>
-    <span>
-        I am also good
-    </span>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores tempora possimus molestiae doloremque quod. Recusandae laborum, laudantium cupiditate magni nostrum sit repellat dolorum ipsa vero aspernatur saepe autem, quod obcaecati, maxime quaerat! Praesentium culpa ipsam quasi odio sapiente nam, animi velit corporis nostrum!</p>
-</body>
+    <style>
+      /* This CSS rule applies to BOTH div and span elements */
+      div,
+      span {
+        color: red; /* Text color becomes red */
+        background-color: yellow; /* Background color becomes yellow */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- First div: styled because of the div selector -->
+    <div>Hey I am harry and today I am in CSS Mood</div>
+
+    <!-- Second div: same styling as above -->
+    <div>I am good</div>
+
+    <!-- Span is also styled because span is included in the CSS selector -->
+    <span> I am also good </span>
+
+    <!-- Paragraph (p) is NOT styled because p is not included in the CSS selector -->
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
+      tempora possimus molestiae doloremque quod. Recusandae laborum, laudantium
+      cupiditate magni nostrum sit repellat dolorum ipsa vero aspernatur saepe
+      autem, quod obcaecati, maxime quaerat! Praesentium culpa ipsam quasi odio
+      sapiente nam, animi velit corporis nostrum!
+    </p>
+  </body>
 </html>
