@@ -1,37 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+
     <style>
-        .container{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 23px;
-        }
-        .box{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 45px;
-            width: 45px;
-            border: 2px solid black;  
-        }
+      /* Main container: uses flexbox to align all boxes horizontally */
+      .container {
+        display: flex;
+        justify-content: center; /* Centers boxes horizontally */
+        align-items: center; /* Centers boxes vertically */
+        gap: 23px; /* Space between boxes */
+      }
+
+      /* Styling for each individual box */
+      .box {
+        display: flex;
+        justify-content: center; /* Centers text horizontally */
+        align-items: center; /* Centers text vertically */
+        height: 45px;
+        width: 45px;
+        border: 2px solid black; /* Simple border around each box */
+      }
     </style>
-</head>
-<body>
-    <!-- 
-        Given 5 boxes, Assign a random color and a random background to each box using DOM concepts
-     -->
-     <div class="container">
-        <div class="box">Box</div>
-        <div class="box">Box</div>
-        <div class="box">Box</div>
-        <div class="box">Box</div>
-        <div class="box">Box</div>
-     </div>
-     <script src="script.js"></script>
-</body>
+  </head>
+  <body>
+    <!-- Instruction (for developer): 
+         Using JavaScript DOM concepts, assign each box 
+         a random text color and random background color 
+    -->
+    <div class="container">
+      <div class="box">Box</div>
+      <div class="box">Box</div>
+      <div class="box">Box</div>
+      <div class="box">Box</div>
+      <div class="box">Box</div>
+    </div>
+
+    <!-- Linking external JavaScript file to add random colors -->
+    <script src="script.js"></script>
+  </body>
 </html>
