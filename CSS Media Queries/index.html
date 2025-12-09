@@ -1,61 +1,71 @@
 <!DOCTYPE html>
+<!-- Declares HTML5 document type -->
 <html lang="en">
+  <!-- Sets language to English -->
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Character encoding set to UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Ensures responsive behavior on all screens -->
     <title>CSS media query</title>
+
     <style>
+      /* Default body background color (applies to all screen sizes) */
+      body {
+        background-color: red;
+      }
+
+      /* Media query: applies when the device is in portrait mode */
+      @media screen and (orientation: portrait) {
         body {
-            background-color: red;
+          border: 2px solid purple; /* Adds purple border in portrait orientation */
+        }
+      }
+
+      /* Media query: applies only to screens with width 455px or smaller */
+      @media only screen and (max-width: 455px) {
+        body {
+          background-color: blue; /* Change background to blue on small screens */
         }
 
-        @media screen and (orientation: portrait) {
-            body{
-                border: 2px solid purple;
-            }
+        .boxes {
+          flex-direction: column; /* Stack boxes vertically on small screens */
         }
+      }
 
-        @media only screen and (max-width: 455px){
-            body{
-
-                background-color: blue;
-            }
-            
-            .boxes{
-                flex-direction: column;
-            }
-        }
-        
-        /* @media not|only mediatype and (expressions) {
+      /* Example media query syntax (commented out)
+        @media not|only mediatype and (expressions) {
             CSS-Code;
         } */
 
-        .boxes{
-            display: flex;
-        }
+      /* Container that holds all boxes */
+      .boxes {
+        display: flex; /* Shows all boxes in a row by default */
+      }
 
-        .box{
-            width: 344px;
-            height: 344px;
-            background-color: steelblue;
-            padding: 3px;
-            margin: 3px;
-        }
-
+      /* Styles for individual boxes */
+      .box {
+        width: 344px;
+        height: 344px;
+        background-color: steelblue;
+        padding: 3px;
+        margin: 3px;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <div>
-        Hey I am a red body guy!
+      Hey I am a red body guy!
+      <!-- Simple text content -->
     </div>
 
     <div class="boxes">
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
+      <!-- Three blue boxes arranged using flexbox -->
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
     </div>
-</body>
-
+  </body>
 </html>
