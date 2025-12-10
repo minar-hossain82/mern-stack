@@ -1,32 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Sets the character encoding for proper text rendering -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Ensures responsiveness on all devices -->
     <title>Overflow</title>
+
     <style>
-        .box {
-            width: 30vw;
-            height: 30vh;
-            border: 2px solid black;
-            /* overflow: auto;
-            overflow-x: hidden;
-            overflow-y: scroll; */
-            overflow: auto hidden;
-            /* white-space: nowrap;
-            text-overflow: ellipsis; */
-        }
+      .box {
+        width: 30vw; /* Box width is 30% of the viewport width */
+        height: 30vh; /* Box height is 30% of the viewport height */
+        border: 2px solid black; /* Adds a border around the box */
+
+        /* Overflow settings */
+        /* overflow: auto;  Adds scrollbars only when needed */
+        /* overflow-x: hidden;  Hides horizontal overflow */
+        /* overflow-y: scroll;  Forces vertical scrollbar */
+
+        overflow: auto hidden; /* Vertical: auto (scroll if needed), Horizontal: hidden */
+
+        /* white-space: nowrap; Prevents text from wrapping to the next line */
+        /* text-overflow: ellipsis; Shows '...' when text overflows in a single line */
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="box">
-        I am a good boy and I love to write Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta iure amet
-        unde voluptas nihil vero, maxime esse quis quos natus rem, earum aspernatur quasi aut ea commodi nostrum
-        voluptate! Sint rerum nostrum perferendis sapiente explicabo perspiciatis, ut magni? Aspernatur, provident
-        dolorum unde corporis doloribus rem!
+      <!-- This text is long enough to cause vertical overflow and demonstrate scroll behavior -->
+      I am a good boy and I love to write Lorem ipsum dolor, sit amet
+      consectetur adipisicing elit. Dicta iure amet unde voluptas nihil vero,
+      maxime esse quis quos natus rem, earum aspernatur quasi aut ea commodi
+      nostrum voluptate! Sint rerum nostrum perferendis sapiente explicabo
+      perspiciatis, ut magni? Aspernatur, provident dolorum unde corporis
+      doloribus rem!
     </div>
-</body>
-
+  </body>
 </html>
