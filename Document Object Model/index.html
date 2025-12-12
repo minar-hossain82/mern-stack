@@ -1,21 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript DOM</title>
-</head>
-<body>
+  </head>
+  <body>
+    <!-- Main container -->
     <div class="container">
-        <div class="box">
-            This is a box
-        </div>
+      <!-- Inner box -->
+      <div class="box">This is a box</div>
     </div>
+
     <script>
-        document.title = "Harry is good"
-        console.log(document.title)
-        console.log(document.body)
-        document.body.style.backgroundColor = "green";
+      // Changing the title of the document dynamically
+      document.title = "Harry is good";
+
+      // Printing the updated title in the console
+      console.log(document.title);
+
+      // Printing the entire body element in the console
+      console.log(document.body);
+
+      // Changing the background color of the body
+      document.body.style.backgroundColor = "green";
     </script>
-</body>
+  </body>
 </html>
