@@ -1,40 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- Defines character encoding -->
+    <meta charset="UTF-8" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Makes the layout responsive on different screen sizes -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Title shown on browser tab -->
     <title>Document</title>
+
     <style>
-        .box {
-            height: 121px;
-            width: 121px;
-            background-color: red;
-            border-radius: 70px;
-            position: absolute;
-            bottom: 0;
-            left: 0; 
-        }
+      /* This box represents a red circular shape */
+      .box {
+        height: 121px; /* Height of the box */
+        width: 121px; /* Width of the box */
+        background-color: red; /* Background color */
+        border-radius: 70px; /* Makes the box circular */
+        position: absolute; /* Positioned relative to the container */
+        bottom: 0; /* Aligns box to the bottom */
+        left: 0; /* Aligns box to the left */
+      }
 
-        .container {
-            position: relative;
-            height: 80vh;
-            width: 80vw;
-            background-color: blue;
-        }
- 
+      /* Container that holds the box */
+      .container {
+        position: relative; /* Needed for absolute positioning of child */
+        height: 80vh; /* 80% of viewport height */
+        width: 80vw; /* 80% of viewport width */
+        background-color: blue; /* Container background color */
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
+    <!-- Main container -->
     <div class="container">
-
-        <div class="box">
-        </div>
+      <!-- Red circular box inside the container -->
+      <div class="box"></div>
     </div>
-    <!-- 
-   
-     -->
-</body>
-
+  </body>
 </html>
