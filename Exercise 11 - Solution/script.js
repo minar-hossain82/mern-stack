@@ -1,18 +1,34 @@
-let a = 7
+// Store the number whose factorial will be calculated
+let a = 7;
 
-function factorial(number){
-   let arr = Array.from(Array(number+1).keys())
-   let c = arr.slice(1,).reduce((a, b)=> a*b )
-   return c
+// Function to calculate factorial using Array and reduce
+function factorial(number) {
+  // Create an array from 0 to number (e.g., [0,1,2,3,...,number])
+  let arr = Array.from(Array(number + 1).keys());
+
+  // Remove 0 and multiply all remaining values to get factorial
+  let c = arr.slice(1).reduce((a, b) => a * b);
+
+  // Return the final factorial value
+  return c;
 }
 
+// Function to calculate factorial using a for loop
+function facFor(number) {
+  // Initialize factorial result as 1
+  let fac = 1;
 
-function facFor(number){
-    let fac = 1;
-    for (let index = 1; index <= number; index++) {
-        fac = fac * index
-    }
-    return fac
+  // Loop from 1 to number and multiply each value
+  for (let index = 1; index <= number; index++) {
+    fac = fac * index;
+  }
+
+  // Return the factorial value
+  return fac;
 }
-console.log(factorial(a))
-console.log(facFor(a))
+
+// Print factorial using array + reduce method
+console.log(factorial(a));
+
+// Print factorial using for loop method
+console.log(facFor(a));
