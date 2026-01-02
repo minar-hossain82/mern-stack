@@ -1,11 +1,15 @@
-.red{
- color: red;
+/* Class to make text color red */
+.red {
+  color: red;
 }
 
-.bg-yellow{
-    background-color: yellow;
+/* Class to apply yellow background color */
+.bg-yellow {
+  background-color: yellow;
 }
 
-#firstdiv{
-    /* background-color: red; */
+/* ID selector for the first div
+   Background color is commented out for now */
+#firstdiv {
+  /* background-color: red; */
 }
