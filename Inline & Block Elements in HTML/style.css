@@ -1,15 +1,27 @@
-p{
-    background-color: aquamarine;
+/* Style for all <p> (paragraph) elements */
+p {
+  background-color: aquamarine; /* Sets the paragraph background to aquamarine */
 }
 
-a{
-    background-color: rgb(242, 160, 122);
+/* Style for all <a> (anchor / link) elements */
+a {
+  background-color: rgb(
+    242,
+    160,
+    122
+  ); /* Applies a peach-like background color to links */
 }
 
-div{
-    background-color: yellow;
+/* Style for all <div> (division / container) elements */
+div {
+  background-color: yellow; /* Gives div elements a yellow background */
 }
 
-span{
-    background-color: rgb(198, 165, 230);
+/* Style for all <span> (inline text container) elements */
+span {
+  background-color: rgb(
+    198,
+    165,
+    230
+  ); /* Sets a light purple background for span elements */
 }
