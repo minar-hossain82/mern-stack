@@ -1,4 +1,8 @@
-h1{
-    background-color: red;
-    color: yellow;
+/* Style for all h1 headings */
+h1 {
+  /* Sets the background color of the heading to red */
+  background-color: red;
+
+  /* Sets the text color of the heading to yellow */
+  color: yellow;
 }
