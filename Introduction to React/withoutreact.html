@@ -1,18 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <!-- Define character encoding -->
+    <meta charset="UTF-8" />
+
+    <!-- Make the page responsive on different screen sizes -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Title shown in the browser tab -->
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
+    <!-- Display the counter value -->
     <div id="counter">0</div>
+
+    <!-- Button that increments the counter -->
     <button id="btn">Click me</button>
+
     <script>
-        document.getElementById("btn").addEventListener("click", ()=>{
-            let num = parseInt(document.getElementById("counter").innerHTML)
-            document.getElementById("counter").innerHTML = num + 1;
-        })
+      // Add a click event listener to the button
+      document.getElementById("btn").addEventListener("click", () => {
+        // Get the current counter value and convert it to a number
+        let num = parseInt(document.getElementById("counter").innerHTML);
+
+        // Increment the counter and update the displayed value
+        document.getElementById("counter").innerHTML = num + 1;
+      });
     </script>
-</body>
+  </body>
 </html>
