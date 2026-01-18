@@ -1,30 +1,43 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <!-- Character encoding set to UTF-8 -->
+    <meta charset="UTF-8" />
+
+    <!-- Makes the page responsive on different screen sizes -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Title of the webpage shown in browser tab -->
     <title>Document</title>
+
     <style>
-        .box{
-            height: 34px;
-            width: 34px;
-            margin: 34px;
-            padding: 34px;
-            border: 2px solid black;
-        }
+      /* Styling for all elements with class "box" */
+      .box {
+        height: 34px; /* Height of the box */
+        width: 34px; /* Width of the box */
+        margin: 34px; /* Space outside the box */
+        padding: 34px; /* Space inside the box */
+        border: 2px solid black; /* Black border around the box */
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
+    <!-- Container div holding all box elements -->
     <div class="container">
-        <div class="box">Bhupendra Jogi 1 </div>
-        <div class="box">Bhupendra Jogi 1.5 </div>
-        <div class="box">Bhupendra Jogi 2</div>
-        <div id="redbox" class="box">Bhupendra Jogi 2.5</div>
-        <div class="box">Bhupendra Jogi 3</div>
-        <div class="box">Bhupendra Jogi 4</div>
-        <div class="box">Bhupendra Jogi 5</div>
+      <!-- Individual boxes with text content -->
+      <div class="box">Bhupendra Jogi 1</div>
+      <div class="box">Bhupendra Jogi 1.5</div>
+      <div class="box">Bhupendra Jogi 2</div>
+
+      <!-- Box with both class and unique id -->
+      <div id="redbox" class="box">Bhupendra Jogi 2.5</div>
+
+      <div class="box">Bhupendra Jogi 3</div>
+      <div class="box">Bhupendra Jogi 4</div>
+      <div class="box">Bhupendra Jogi 5</div>
     </div>
 
+    <!-- External JavaScript file -->
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
