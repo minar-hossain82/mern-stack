@@ -1,4 +1,8 @@
-body{
-    background-color: red;
-    color: white;
+/* Style applied to the entire page */
+body {
+  /* Sets the background color of the page to red */
+  background-color: red;
+
+  /* Sets the text color to white */
+  color: white;
 }
