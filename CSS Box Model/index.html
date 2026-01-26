@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,44 +6,37 @@
     <title>CSS Boxmodel</title>
 
     <style>
-      /* Reset all default margin and padding for every element */
       * {
         margin: 0;
         padding: 0;
       }
 
-      /* Common box styling (background for all boxes) */
       .box {
         background-color: aqua;
       }
 
-      /* First box styles */
       .box1 {
-        color: yellow; /* Text color */
-        padding: 10px; /* Inner space between content and border */
-        margin: 35px; /* Outer space around the element */
-        border: 2px solid blue; /* Border around the box */
-        height: 200px; /* Total height including padding & border (because of box-sizing) */
-        box-sizing: border-box; /* Includes padding + border inside the height */
+        color: yellow;
+        padding: 10px;
+        margin: 35px;
+        border: 2px solid blue;
+        height: 200px;
+        box-sizing: border-box;
       }
 
-      /* Second box styles */
       .box2 {
-        color: red; /* Text color */
-        padding: 10px; /* Inner spacing */
-        margin: 25px; /* Outer spacing */
-        border: 2px solid black; /* Border styling */
-        height: 200px; /* Total height including padding & border */
-        box-sizing: border-box; /* Prevents height from increasing due to padding/border */
+        color: red;
+        padding: 10px;
+        margin: 25px;
+        border: 2px solid black;
+        height: 200px;
+        box-sizing: border-box;
       }
     </style>
   </head>
 
   <body>
-    <!-- First box element -->
     <div class="box box1">I am a box</div>
-
-    <!-- Second box element -->
     <div class="box box2">I am another box</div>
   </body>
 </html>
