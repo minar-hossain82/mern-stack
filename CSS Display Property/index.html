@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,39 +6,25 @@
     <title>CSS Display Property</title>
 
     <style>
-      /* Reset browser default margin and padding */
       * {
         margin: 0;
         padding: 0;
       }
 
-      /* Common box style */
       .box {
-        border: 2px solid blue; /* Visible border around each box */
-        display: inline-block; /* Behaves like inline + block → stays in one line but can have height/width */
-        width: 344px; /* Width of the box */
-        padding: 45px; /* Inner spacing between text and border */
-        margin: 34px; /* Outer spacing around each box */
-      }
-
-      .box1 {
-        /* display: none;           Element is removed completely (no space taken) */
-        /* visibility: hidden;      Element becomes invisible but still takes space */
+        border: 2px solid blue;
+        display: inline-block;
+        width: 344px;
+        padding: 45px;
+        margin: 34px;
       }
     </style>
   </head>
 
   <body>
-    <!-- MDN documentation reference for display property -->
-    <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/display -->
-
-    <!-- First box -->
-    <div class="box box1">I am a box</div>
-
-    <!-- Second box -->
+    <div class="box">I am a box</div>
     <div class="box">also a nice box</div>
 
-    <!-- Inline elements (span stays in same line unless space breaks it) -->
     <span>I am a good</span>
     <span>boy</span>
   </body>
