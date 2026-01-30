@@ -1,92 +1,57 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <!-- Sets character encoding -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Makes page responsive -->
     <title>CSS Position</title>
 
     <style>
       * {
-        margin: 0; /* Removes default margin */
-        padding: 0; /* Removes default padding */
+        margin: 0;
+        padding: 0;
       }
 
       .box {
-        height: 433px; /* Fixed height for all boxes */
-        width: 80vw; /* Width is 80% of viewport width */
-        padding: 3px; /* Inner spacing */
-        margin: 3px; /* Outer spacing */
-        border: 2px solid black; /* Border around each box */
+        height: 433px;
+        width: 80vw;
+        padding: 3px;
+        margin: 3px;
+        border: 2px solid black;
       }
 
       .box1 {
-        background-color: aqua; /* Aqua background */
-
-        /* Sticky example (commented out): sticks to top while scrolling */
-        /* position: sticky;
-            top:0px;
-            height: 111px;
-            width:100%;
-            margin: 0;
-            padding: 0; */
-
-        position: absolute; /* Removes element from normal flow and positions relative to nearest positioned ancestor */
-        top: 0px; /* Moves element to top */
-        left: 3px; /* Moves slightly from the left */
+        background-color: aqua;
+        position: absolute;
+        top: 0px;
+        left: 3px;
       }
 
       .box2 {
-        background-color: azure; /* Light background */
-
-        /* Relative example (commented): moves based on its normal position */
-        /* position: relative;
-            top: 34px;
-            left: 56px; */
+        background-color: azure;
       }
 
       .box3 {
-        background-color: antiquewhite; /* Light cream background */
-
-        /* Fixed example (commented): stays fixed in viewport */
-        /* position: fixed;
-            bottom: 0px;
-            left:8vw;
-            height: 111px; */
+        background-color: antiquewhite;
       }
 
       .box4 {
-        background-color: purple; /* Purple color */
+        background-color: purple;
       }
 
       .parent {
-        padding: 43px; /* Space inside parent */
-        margin: 34px; /* Space outside parent */
-        border: 3px solid purple; /* Border for parent container */
-
-        /* Uncommenting this will make .box1's absolute position relative to this parent */
-        /* position: relative; */
-
-        /* Special note: transform, filter, or perspective can also make an element act positioned */
-        /* transform: translate(0); */
-        /* filter: invert(0); */
-        /* perspective: 0em; */
+        padding: 43px;
+        margin: 34px;
+        border: 3px solid purple;
       }
     </style>
   </head>
 
   <body>
     <div class="parent">
-      <!-- Parent container for all boxes -->
       <div class="box box1"></div>
-      <!-- Absolutely positioned box -->
       <div class="box box2"></div>
-      <!-- Normal block element -->
       <div class="box box3"></div>
-      <!-- Normal block element -->
       <div class="box box4"></div>
-      <!-- Normal block element -->
     </div>
   </body>
 </html>
