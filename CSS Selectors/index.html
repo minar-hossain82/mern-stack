@@ -1,96 +1,75 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <!-- Defines character encoding -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Ensures responsive layout -->
     <title>CSS Selectors</title>
 
     <style>
-      /* Element Selector — selects all <div> elements */
       div {
-        /* background-color: red;  Example only */
+        /* background-color: red; */
       }
 
-      /* Class Selector — selects elements with class="red" */
       .red {
         background-color: red;
       }
 
-      /* ID Selector — selects element with id="green" */
       #green {
         background-color: green;
       }
 
-      /* Child Selector — selects ONLY direct <p> children of <div> */
       div > p {
         color: blue;
         background-color: brown;
       }
 
-      /* Descendant Selector — selects ALL <p> inside <div> (any level) */
       div p {
         color: blue;
         background-color: brown;
       }
 
-      /* Universal Selector — selects ALL elements */
       * {
         margin: 0;
         padding: 0;
       }
 
-      /* Pseudo-class Selectors for links */
       a:visited {
-        /* When link has been visited */
         color: yellow;
       }
 
       a:link {
-        /* Before a link is visited */
         color: green;
       }
 
       a:active {
-        /* While clicking the link */
         background-color: red;
       }
 
       a:hover {
-        /* When mouse hovers over link */
         background-color: yellow;
       }
 
-      /* Pseudo-class: selects first <p> child inside any parent */
       p:first-child {
         background-color: aqua;
       }
     </style>
   </head>
+
   <body>
     <main class="one">
-      <!-- Parent element containing two paragraphs -->
       <p>I am first</p>
-      <!-- First child: will get aqua background -->
       <p>I am second</p>
     </main>
 
     <div class="red">
-      <!-- Class selector applied -->
       I am a div
       <article>
         <p>I am a para inside div</p>
-        <!-- Selected by descendant selector -->
       </article>
     </div>
 
-    <div id="green">
-      <!-- ID selector applied -->
-      I am another div
-    </div>
+    <div id="green">I am another div</div>
 
-    <!-- Links to demonstrate pseudo-classes -->
     <a href="https://www.google.com">Go to Google</a>
     <a href="https://www.facebook2.com">Go to Facebook</a>
   </body>
