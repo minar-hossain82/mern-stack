@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,73 +6,60 @@
     <title>Document</title>
 
     <style>
-      /* Reset all elements’ default margin and padding */
       * {
         margin: 0;
         padding: 0;
       }
 
-      /* Base font size for the entire document */
       html {
         font-size: 12px;
       }
 
-      /* Top box styling */
       .box {
-        box-sizing: border-box; /* Includes padding & border inside width/height */
+        box-sizing: border-box;
         border: 2px solid black;
-        width: 80vw; /* 80% of viewport width */
-        height: 10vh; /* 10% of viewport height */
-        margin: auto; /* Center horizontally */
+        width: 80vw;
+        height: 10vh;
+        margin: auto;
         background-color: aquamarine;
       }
 
-      /* Large container block */
       .container {
         box-sizing: border-box;
         border: 2px solid black;
-        width: 80vw; /* Responsive width */
-        min-height: 80vh; /* Height expands as content grows */
-        margin: 23px auto; /* Adds space around and centers it */
+        width: 80vw;
+        min-height: 80vh;
+        margin: 23px auto;
         font-size: 18px;
         background-color: aquamarine;
       }
 
-      /* Direct child of container (1st level div inside .container) */
       .container > div {
-        font-size: 2em; /* 2 × parent font size */
+        font-size: 2em;
         border: 2px solid red;
-        width: 50%; /* Takes half of container width */
+        width: 50%;
       }
 
-      /* Nested div inside previous div (2nd level div) */
       .container > div > div {
         border: 2px solid blue;
-        width: 50%; /* Half width of its parent */
+        width: 50%;
       }
 
-      /* Another container with custom style */
       .mycont {
         border: 2px solid black;
         box-sizing: border-box;
         margin: 23px auto;
         color: rgb(0, 0, 0);
         font-size: 22px;
-        width: 80vw; /* Responsive width same as others */
+        width: 80vw;
       }
     </style>
   </head>
 
   <body>
-    <!-- Reference for CSS units -->
-    <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Values_and_Units -->
-
-    <!-- Header-like box -->
     <div class="box">This is a box</div>
 
-    <!-- Main content container -->
     <div class="container">
-      <!-- First level div -->
       <div>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis
         necessitatibus quia quod iste dolorem voluptatem fuga quidem aspernatur.
@@ -82,19 +69,14 @@
         quo adipisci libero quam laboriosam nihil voluptate natus nobis earum
         ad?
 
-        <!-- Nested second level div -->
         <div>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero omnis
           voluptas est aliquam, dolores rem laudantium nulla maiores odio fugit,
           totam voluptatem saepe!
         </div>
       </div>
-
-      <!-- Expand this content to see min-height effect of container -->
-      <!-- This container expands automatically when content grows -->
     </div>
 
-    <!-- Another separate container -->
     <div class="mycont">I am another container</div>
   </body>
 </html>
