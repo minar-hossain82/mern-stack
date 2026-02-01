@@ -1,48 +1,33 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta viewport="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS Transitions</title>
 
     <style>
-      /* Outer container for layout demonstration */
       .container {
-        background-color: antiquewhite; /* Light background */
-        width: 50vw; /* Half of viewport width */
-        height: 40vh; /* 40% of viewport height */
+        background-color: antiquewhite;
+        width: 50vw;
+        height: 40vh;
       }
 
-      /* Small box that will animate with transitions */
       .box {
-        background-color: aquamarine; /* Initial color */
-        width: 5vw; /* Box width */
-        height: 4vh; /* Box height */
-
-        /* Shorthand transition (property, duration, timing, delay) */
+        background-color: aquamarine;
+        width: 5vw;
+        height: 4vh;
         transition: all 3s cubic-bezier(0.09, 0.5, 0, 0.99) 1s;
-        /* Means:
-               - animate all properties
-               - duration = 3s
-               - custom easing curve using cubic-bezier()
-               - delay before animation starts = 1s
-            */
       }
 
-      /* Applied to .box to animate movement and color */
       .translate {
         transform: translateX(10vw) translateY(10vh) scale(2);
-        /* Moves box diagonally & doubles its size */
-
-        background-color: blue; /* New color after transition */
+        background-color: blue;
       }
     </style>
   </head>
 
   <body>
-    <!-- Main container -->
     <div class="container">
-      <!-- Box with translate class to trigger transition animation -->
       <div class="box translate"></div>
     </div>
   </body>
