@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Css Variables</title>
+
     <style>
-      /* Define CSS variables for colors, padding, and default opacity */
       :root {
         --color: rgb(255, 0, 247);
         --seccolor: rgb(231, 164, 246);
@@ -13,45 +13,37 @@
         --defop: 0.4;
       }
 
-      /* Reset default margin and padding for all elements */
       * {
         margin: 0;
         padding: 0;
       }
 
-      /* Navigation bar styling using primary color variable */
       .nav {
         background-color: var(--color);
       }
 
-      /* Make navigation list horizontal using flexbox */
       ul {
         display: flex;
       }
 
-      /* Style each list item with padding, border, and default opacity */
       ul li {
-        opacity: var(--defop); /* Set default transparency for list items */
-        list-style: none; /* Remove default bullet points */
-        padding: var(--defpad); /* Apply consistent padding from CSS variable */
-        border: 2px solid var(--seccolor); /* Use secondary color for border */
+        opacity: var(--defop);
+        list-style: none;
+        padding: var(--defpad);
+        border: 2px solid var(--seccolor);
       }
 
-      /* Style the first list item differently */
       ul li:first-child {
-        --color: rgb(243, 87, 8); /* Override color variable locally */
-        background-color: var(
-          --color,
-          blue
-        ); /* Use overridden color, fallback to blue */
+        --color: rgb(243, 87, 8);
+        background-color: var(--color, blue);
       }
 
-      /* Main container styling using secondary color variable */
       .container {
         background-color: var(--seccolor);
       }
     </style>
   </head>
+
   <body>
     <div class="nav">
       <ul>
@@ -61,7 +53,6 @@
       </ul>
     </div>
 
-    <!-- Content section styled with secondary color -->
     <div class="container">
       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse assumenda
       qui ad dolorem consequuntur facilis aliquam. Unde sapiente ipsam quaerat,
