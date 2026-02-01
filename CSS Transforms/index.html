@@ -1,54 +1,42 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <!-- Sets character encoding to UTF-8 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Makes the layout responsive -->
     <title>Css Transform</title>
+
     <style>
       * {
-        margin: 0; /* Removes default margin from all elements */
-        padding: 0; /* Removes default padding from all elements */
+        margin: 0;
+        padding: 0;
       }
 
       .box {
-        height: 50px; /* Box height */
-        width: 50px; /* Box width */
-        background-color: beige; /* Background color of the box */
-        border: 2px solid black; /* Box border */
+        height: 50px;
+        width: 50px;
+        background-color: beige;
+        border: 2px solid black;
 
-        transform: rotate(
-          0.125turn
-        ); /* Rotates the box by 0.125 of a full turn (45 degrees) */
-        transform-origin: -50% -50%; /* Sets pivot point outside the box, causing unusual rotation */
+        transform: rotate(0.125turn);
+        transform-origin: -50% -50%;
 
-        /* Other transform examples: */
-        /* transform: rotateZ(9deg); */
-        /* transform: skewY(34deg); */
-        /* transform: translateY(100%) skewX(40deg) translateX(45%); */
-
-        display: flex; /* Enables flexbox to center text inside */
-        justify-content: center; /* Centers horizontally */
-        align-items: center; /* Centers vertically */
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
 
       .container {
-        margin: 55px; /* Adds outer spacing */
-        width: 100vw; /* Full viewport width */
-        height: 80vh; /* 80% of viewport height */
-        border: 2px solid purple; /* Border around container */
+        margin: 55px;
+        width: 100vw;
+        height: 80vh;
+        border: 2px solid purple;
       }
     </style>
   </head>
 
   <body>
     <div class="container">
-      <!-- Main container wrapping the box -->
-      <div class="box">
-        <!-- The box being transformed -->
-        box
-      </div>
+      <div class="box">box</div>
     </div>
   </body>
 </html>
