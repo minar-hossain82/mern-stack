@@ -1,13 +1,11 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <!-- Makes the page responsive on different screen sizes -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Event bubbling</title>
 
     <style>
-      /* Style for the innermost clickable element */
       .child {
         background-color: aliceblue;
         border: 2px solid black;
@@ -16,14 +14,12 @@
         cursor: pointer;
       }
 
-      /* Style for the middle container */
       .childContainer {
         background-color: beige;
         padding: 14px;
         margin: 14px;
       }
 
-      /* Style for the outermost container */
       .container {
         background-color: rgb(227, 227, 28);
         padding: 14px;
@@ -33,38 +29,29 @@
   </head>
 
   <body>
-    <!-- Outermost container -->
     <div class="container">
-      <!-- Middle container -->
       <section class="childContainer">
-        <!-- Inner child element -->
         <div class="child">I am a child</div>
       </section>
     </div>
 
     <script>
-      // Click event for the child element
       document.querySelector(".child").addEventListener("click", (e) => {
-        // Stops the event from bubbling up to parent elements
         e.stopPropagation();
         alert("Child Was clicked");
       });
 
-      // Click event for the childContainer element
       document
         .querySelector(".childContainer")
         .addEventListener("click", (e) => {
-          // Prevents the event from reaching the container
           e.stopPropagation();
           alert("childContainer Was clicked");
         });
 
-      // Click event for the outer container
       document.querySelector(".container").addEventListener("click", () => {
         alert("container Was clicked");
       });
 
-      // Generates a random RGB color
       function getRandomColor() {
         let val1 = Math.ceil(Math.random() * 255);
         let val2 = Math.ceil(Math.random() * 255);
@@ -72,13 +59,11 @@
         return `rgb(${val1}, ${val2}, ${val3})`;
       }
 
-      // Changes the background color of childContainer after 5 seconds
       let a = setTimeout(() => {
         document.querySelector(".childContainer").style.background =
           getRandomColor();
       }, 5000);
 
-      // Logs the timeout ID to the console
       console.log(a);
     </script>
   </body>
