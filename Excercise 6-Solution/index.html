@@ -1,49 +1,40 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <!-- Character encoding -->
     <meta charset="UTF-8" />
-
-    <!-- Responsive design for different screen sizes -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- Page title -->
     <title>Document</title>
 
     <style>
-      /* Logo container */
-      .logo {
-        /* Currently no styles applied */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
       }
 
-      /* Logo image size */
       .logo img {
         width: 164px;
       }
 
-      /* Navigation bar styling */
       nav {
-        display: flex; /* Align items in a row */
-        justify-content: space-around; /* Space items evenly */
-        align-items: center; /* Center items vertically */
-        font-family: "Segoe UI"; /* Set font */
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-family: "Segoe UI", Tahoma, sans-serif;
       }
 
-      /* Right side menu list */
       .right ul {
-        display: flex; /* Display menu items horizontally */
-        gap: 34px; /* Space between menu items */
+        display: flex;
+        gap: 34px;
+        list-style: none;
       }
 
-      /* Individual menu items */
       .right ul li {
-        list-style: none; /* Remove bullet points */
-        display: flex; /* Align text and icon */
-        align-items: center; /* Vertically center content */
-        cursor: pointer; /* Pointer cursor on hover */
+        display: flex;
+        align-items: center;
+        cursor: pointer;
       }
 
-      /* Spacing between text and dropdown icon */
       .right ul li span {
         padding: 0 5px;
       }
@@ -51,11 +42,8 @@
   </head>
 
   <body>
-    <!-- Header section -->
     <header>
-      <!-- Navigation bar -->
       <nav>
-        <!-- Logo section -->
         <div class="logo">
           <img
             src="https://www.ultraedit.com/wp-content/uploads/2023/01/Dark-logo.png"
@@ -63,13 +51,10 @@
           />
         </div>
 
-        <!-- Right navigation menu -->
         <div class="right">
           <ul>
-            <!-- Products menu item -->
             <li>
               <span>Products</span>
-              <!-- Dropdown arrow icon -->
               <svg
                 width="20"
                 height="20"
@@ -87,7 +72,6 @@
               </svg>
             </li>
 
-            <!-- Pricing menu item -->
             <li>
               <span>Pricing</span>
               <svg
@@ -107,7 +91,6 @@
               </svg>
             </li>
 
-            <!-- Resources menu item -->
             <li>
               <span>Resources</span>
               <svg
@@ -127,7 +110,6 @@
               </svg>
             </li>
 
-            <!-- About Us menu item -->
             <li>
               <span>About Us</span>
               <svg
@@ -147,7 +129,6 @@
               </svg>
             </li>
 
-            <!-- Language selector icon -->
             <li>
               <img
                 src="https://www.ultraedit.com/wp-content/themes/Divi_Child/img/Lang.png"
