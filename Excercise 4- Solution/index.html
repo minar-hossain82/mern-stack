@@ -1,86 +1,54 @@
-<!DOCTYPE html>
-<!-- Defines HTML5 document -->
-
+<!doctype html>
 <html lang="en">
-  <!-- Language set to English -->
-
   <head>
     <meta charset="UTF-8" />
-    <!-- Supports all characters and symbols -->
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Makes the website responsive on all devices -->
-
     <title>CSS MultiColor Website</title>
-    <!-- Title shown in browser tab -->
 
-    <!-- Import Google Font (Poppins) -->
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
     </style>
 
     <style>
-      /* 
-        CSS variables (theme colors)
-        Easy to change full website colors from one place
-        */
-
-      /* Alternative color theme (commented)
-        :root{
-            --primary-color: #ad5afacc;
-            --text-color: white;
-            --secondary-color: #e3cff5cc;
-        } 
-        */
-
-      /* Active color theme */
       :root {
         --primary-color: #061872cc;
         --text-color: white;
         --secondary-color: #6ea5fccc;
       }
 
-      /* Page background color */
-      body {
-        background-color: var(--secondary-color);
-      }
-
-      /* Reset default margin & padding */
       * {
         margin: 0;
         padding: 0;
         font-family: "Poppins", sans-serif;
       }
 
-      /* Navbar styling */
+      body {
+        background-color: var(--secondary-color);
+      }
+
       nav {
         background-color: var(--primary-color);
         padding: 12px 0;
       }
 
-      /* List items styling */
       ul li {
-        list-style: none; /* Remove bullet points */
-        display: inline; /* Make items horizontal */
+        list-style: none;
+        display: inline;
         padding: 23px;
         font-weight: bolder;
       }
 
-      /* Navbar links */
       ul li a {
-        color: var(--text-color); /* White text */
-        text-decoration: none; /* Remove underline */
+        color: var(--text-color);
+        text-decoration: none;
       }
     </style>
   </head>
 
   <body>
-    <!-- Header section -->
     <header>
-      <!-- Navigation bar -->
       <nav>
         <ul>
-          <!-- Navigation links -->
           <li><a href="/">Home</a></li>
           <li><a href="/">About</a></li>
           <li><a href="/">Services</a></li>
