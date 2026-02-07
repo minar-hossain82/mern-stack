@@ -1,67 +1,53 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <!-- Character encoding -->
     <meta charset="UTF-8" />
-
-    <!-- Responsive design for different screen sizes -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- Page title -->
     <title>Document</title>
 
     <style>
-      /* The moving ball */
       .box {
-        height: 121px; /* Height of the box */
-        width: 121px; /* Width of the box */
-        background-color: red; /* Red color */
-        border-radius: 70px; /* Makes the box circular */
-        position: absolute; /* Allows free movement inside container */
-        bottom: 0; /* Start from bottom */
-        left: 0; /* Start from left */
-
-        /* Two animations running together:
-               - animateX: horizontal movement
-               - animateY: vertical movement */
-        animation: animateX 3s linear infinite,
+        height: 121px;
+        width: 121px;
+        background-color: red;
+        border-radius: 70px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        animation:
+          animateX 3s linear infinite,
           animateY 1s ease-out infinite alternate;
       }
 
-      /* Container that holds the animation */
       .container {
-        position: relative; /* Reference point for absolute child */
-        height: 80vh; /* 80% of viewport height */
-        width: 80vw; /* 80% of viewport width */
-        background-color: blue; /* Blue background */
+        position: relative;
+        height: 80vh;
+        width: 80vw;
+        background-color: blue;
       }
 
-      /* Horizontal movement animation */
       @keyframes animateX {
         from {
-          left: 0; /* Start from left */
+          left: 0;
         }
         to {
-          left: 100%; /* Move to the right edge */
+          left: 100%;
         }
       }
 
-      /* Vertical movement animation */
       @keyframes animateY {
         from {
-          bottom: 0; /* Start from bottom */
+          bottom: 0;
         }
         to {
-          bottom: 100%; /* Move to the top */
+          bottom: 100%;
         }
       }
     </style>
   </head>
 
   <body>
-    <!-- Main container -->
     <div class="container">
-      <!-- Animated circle -->
       <div class="box"></div>
     </div>
   </body>
