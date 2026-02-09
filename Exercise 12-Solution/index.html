@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,30 +6,24 @@
     <title>Document</title>
 
     <style>
-      /* Main container: uses flexbox to align all boxes horizontally */
       .container {
         display: flex;
-        justify-content: center; /* Centers boxes horizontally */
-        align-items: center; /* Centers boxes vertically */
-        gap: 23px; /* Space between boxes */
+        justify-content: center;
+        align-items: center;
+        gap: 23px;
       }
 
-      /* Styling for each individual box */
       .box {
         display: flex;
-        justify-content: center; /* Centers text horizontally */
-        align-items: center; /* Centers text vertically */
+        justify-content: center;
+        align-items: center;
         height: 45px;
         width: 45px;
-        border: 2px solid black; /* Simple border around each box */
+        border: 2px solid black;
       }
     </style>
   </head>
   <body>
-    <!-- Instruction (for developer): 
-         Using JavaScript DOM concepts, assign each box 
-         a random text color and random background color 
-    -->
     <div class="container">
       <div class="box">Box</div>
       <div class="box">Box</div>
@@ -38,7 +32,6 @@
       <div class="box">Box</div>
     </div>
 
-    <!-- Linking external JavaScript file to add random colors -->
     <script src="script.js"></script>
   </body>
 </html>
