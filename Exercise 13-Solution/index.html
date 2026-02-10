@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,39 +6,34 @@
     <title>Document</title>
 
     <style>
-      /* A card layout containing image + text section */
       .card {
-        display: flex; /* Align image and text side-by-side */
+        display: flex;
         margin: 5px;
         border: 2px solid black;
         width: 900px;
-        justify-content: center; /* Center items horizontally */
-        align-items: center; /* Align items vertically */
+        justify-content: center;
+        align-items: center;
         padding: 12px;
       }
 
-      /* Thumbnail image styling */
       .image img {
-        width: 200px; /* Fixed width for YouTube preview */
+        width: 200px;
       }
 
-      /* Add small vertical spacing for heading and paragraph */
       .text h1,
       p {
         padding: 2px 0;
       }
 
-      /* Required for placing the capsule inside the image */
       .image {
         position: relative;
       }
 
-      /* Capsule showing video duration (positioned at bottom-right of image) */
       .image .capsule {
         position: absolute;
         bottom: 4px;
         right: 5px;
-        z-index: 10; /* Place on top of the image */
+        z-index: 10;
         background: #242020;
         opacity: 0.9;
         color: white;
@@ -50,22 +45,16 @@
   </head>
 
   <body>
-    <!-- Container holding all video cards -->
     <div class="container">
-      <!-- A single YouTube-style video card -->
       <div class="card">
-        <!-- Image + duration capsule -->
         <div class="image">
           <img
             src="https://i.ytimg.com/vi/tVzUXW6siu0/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLACwWOixJVrKLFindK92kYMgTcQbw"
             alt=""
           />
-
-          <!-- Duration overlay on the thumbnail -->
           <div class="capsule">31:06</div>
         </div>
 
-        <!-- Video title + metadata text -->
         <div class="text">
           <h1>Introduction to Backend | Sigma Web Dev video #2</h1>
           <p>CodeWithHarry · 727K views · 2 months ago</p>
@@ -73,7 +62,6 @@
       </div>
     </div>
 
-    <!-- External JavaScript file -->
     <script src="script.js"></script>
   </body>
 </html>
