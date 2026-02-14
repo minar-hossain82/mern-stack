@@ -1,17 +1,11 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <!-- Character encoding -->
     <meta charset="UTF-8" />
-
-    <!-- Responsive design for different screen sizes -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- Page title -->
     <title>Document</title>
 
     <style>
-      /* Class to make text red */
       .red {
         color: red;
       }
@@ -19,9 +13,7 @@
   </head>
 
   <body>
-    <!-- Main container with multiple classes -->
     <div class="container red bg-green">
-      <!-- First box with inline CSS and custom data attributes -->
       <div
         class="box"
         style="display: flex"
@@ -31,31 +23,15 @@
         Hey I am a box
       </div>
 
-      <!-- Second box -->
       <div class="box">Hey I am a box</div>
 
       <script>
-        // Create a reference to the container div
         let cont = document.querySelector(".container");
 
-        // Insert HTML before the container element in the DOM
         cont.insertAdjacentHTML(
           "beforebegin",
-          "<b>I am under the water. Please help me here too much raining.... iuuuuooooo</b>"
+          "<b>I am under the water. Please help me here too much raining.... iuuuuooooo</b>",
         );
-
-        /*
-            The commented code below shows another way to insert an element:
-            - Create a div
-            - Add HTML inside it
-            - Add a class
-            - Insert it before the container
-            */
-
-        // let div = document.createElement("div");
-        // div.innerHTML = "I have been inserted <b>by harry</b>";
-        // div.setAttribute("class", "created");
-        // document.querySelector(".container").before(div);
       </script>
     </div>
   </body>
