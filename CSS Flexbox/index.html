@@ -3,39 +3,47 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CSS Flexbox</title>
+    <title>Flexbox Layout Demo</title>
 
     <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
       .container {
         border: 2px solid red;
         display: flex;
-        height: 80vh;
-        align-items: center;
         flex-flow: row wrap;
+        align-items: center;
         gap: 40px 10px;
+        height: 80vh;
+        padding: 20px;
       }
 
       .item {
         height: 92px;
         width: 92px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         border: 2px solid black;
         background-color: blueviolet;
+        color: white;
+        font-weight: bold;
+      }
+
+      .item--end {
+        align-self: flex-end;
       }
 
       .order-1 {
         order: 1;
-      }
-
-      .order-2 {
-        order: 2;
-      }
-
-      .order-3 {
-        order: 3;
-      }
-
-      .item1 {
-        align-self: flex-end;
       }
     </style>
   </head>
@@ -43,17 +51,17 @@
   <body>
     <main>
       <div class="container">
-        <div class="item item1">1</div>
+        <div class="item item--end">1</div>
         <div class="item">2</div>
         <div class="item">3</div>
         <div class="item order-1">4</div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item">10</div>
+        <div class="item">11</div>
       </div>
     </main>
   </body>
