@@ -3,23 +3,42 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CSS Float & Clear</title>
+    <title>Float and Clear Layout Demo</title>
 
     <style>
-      .cards {
-        border: 2px solid black;
-        display: flow-root;
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
       }
 
-      img {
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.6;
+        padding: 20px;
+      }
+
+      .cards {
+        border: 2px solid black;
+        padding: 16px;
+        display: flow-root; /* Contains floated elements */
+      }
+
+      .cards img {
         float: left;
+        width: 230px;
+        margin-right: 16px;
+        margin-bottom: 10px;
+        border-radius: 6px;
       }
 
       .card {
         border: 2px solid red;
+        padding: 12px;
+        margin-bottom: 12px;
       }
 
-      .card:nth-child(3) {
+      .card:nth-child(4) {
         background-color: aqua;
         clear: both;
       }
@@ -27,28 +46,30 @@
   </head>
 
   <body>
-    <div class="cards">
-      <img
-        src="https://media.istockphoto.com/id/928826678/photo/two-men-relaxing-and-fishing.jpg?s=2048x2048&w=is&k=20&c=fSG5LG9kxLNzjG9_YI1bXdz3-gD7UW2e2bd9arD5Vm8="
-        alt=""
-        width="230"
-      />
+    <main>
+      <section class="cards">
+        <img
+          src="https://media.istockphoto.com/id/928826678/photo/two-men-relaxing-and-fishing.jpg?s=2048x2048&w=is&k=20&c=fSG5LG9kxLNzjG9_YI1bXdz3-gD7UW2e2bd9arD5Vm8="
+          alt="Two men relaxing and fishing by the water"
+        />
 
-      <div class="card">
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi
-          fugiat ab tenetur praesentium sequi, nisi nesciunt officiis magnam ut
-          at voluptatibus sapiente ducimus deleniti esse alias nihil. Soluta
-          iure ipsum voluptatibus assumenda ratione ut?
-        </p>
-      </div>
+        <div class="card">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
+            fugiat ab tenetur praesentium sequi, nisi nesciunt officiis magnam
+            ut at voluptatibus sapiente ducimus deleniti esse alias nihil.
+          </p>
+        </div>
 
-      <div class="card">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
-        explicabo dignissimos a et sapiente sunt...
-      </div>
+        <div class="card">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
+            explicabo dignissimos a et sapiente sunt.
+          </p>
+        </div>
 
-      <div class="card">Card 3</div>
-    </div>
+        <div class="card">Card 3</div>
+      </section>
+    </main>
   </body>
 </html>
