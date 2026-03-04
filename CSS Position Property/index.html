@@ -3,26 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CSS Position</title>
+    <title>CSS Position Example</title>
 
     <style>
       * {
         margin: 0;
         padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      .parent {
+        margin: 34px;
+        padding: 43px;
+        border: 3px solid purple;
+        position: relative;
       }
 
       .box {
-        height: 433px;
         width: 80vw;
-        padding: 3px;
+        height: 433px;
         margin: 3px;
+        padding: 3px;
         border: 2px solid black;
       }
 
       .box1 {
         background-color: aqua;
         position: absolute;
-        top: 0px;
+        top: 0;
         left: 3px;
       }
 
@@ -36,12 +48,6 @@
 
       .box4 {
         background-color: purple;
-      }
-
-      .parent {
-        padding: 43px;
-        margin: 34px;
-        border: 3px solid purple;
       }
     </style>
   </head>
