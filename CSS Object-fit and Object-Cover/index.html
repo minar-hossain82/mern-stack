@@ -3,25 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CSS object Fit and position</title>
+    <title>CSS Background Position Example</title>
 
     <style>
-      .container {
-        height: 488px;
-        width: 466px;
-        border: 2px solid black;
-
-        background-position: center center;
-        background-clip: border-box;
-        background-image: url("https://us.123rf.com/450wm/progressman/progressman1909/progressman190900115/130695651-woman-in-black-coat-walking-along-the-sea.jpg?ver=6");
-        background-repeat: no-repeat;
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
       }
 
-      img {
+      .container {
         width: 466px;
         height: 488px;
-        object-fit: contain;
-        object-position: 10px 20px;
+        border: 2px solid black;
+
+        background-image: url("https://us.123rf.com/450wm/progressman/progressman1909/progressman190900115/130695651-woman-in-black-coat-walking-along-the-sea.jpg?ver=6");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        background-clip: border-box;
       }
     </style>
   </head>
