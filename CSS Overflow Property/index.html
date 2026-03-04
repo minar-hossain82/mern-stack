@@ -3,21 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Overflow</title>
+    <title>CSS Overflow Example</title>
 
     <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
       .box {
         width: 30vw;
         height: 30vh;
         border: 2px solid black;
-        overflow: auto hidden;
+        padding: 10px;
+        overflow-x: hidden;
+        overflow-y: auto;
       }
     </style>
   </head>
 
   <body>
     <div class="box">
-      I am a good boy and I love to write Lorem ipsum dolor, sit amet
+      I am a good boy and I love to write. Lorem ipsum dolor sit amet,
       consectetur adipisicing elit. Dicta iure amet unde voluptas nihil vero,
       maxime esse quis quos natus rem, earum aspernatur quasi aut ea commodi
       nostrum voluptate! Sint rerum nostrum perferendis sapiente explicabo
