@@ -3,28 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>CSS Specificity Demo</title>
+
     <style>
+      /* Element selector */
       h1 {
         color: aqua;
       }
 
+      /* Class selector */
       .cpurple {
         color: purple;
       }
 
+      /* Element + class selector */
       h1.yellow {
         color: yellow;
       }
 
+      /* Attribute selector */
       [data-x="a"] {
         color: maroon;
       }
 
+      /* Class selector */
       .cred {
         color: red;
       }
 
+      /* Complex selector with pseudo-class */
       a.harryclass.rohan-class[href]:hover {
         color: blueviolet;
       }
