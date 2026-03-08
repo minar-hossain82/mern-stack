@@ -3,40 +3,47 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Css Transform</title>
+    <title>CSS Transform Example</title>
 
     <style>
+      /* Reset default browser margin and padding */
       * {
         margin: 0;
         padding: 0;
+        box-sizing: border-box;
       }
 
-      .box {
-        height: 50px;
-        width: 50px;
-        background-color: beige;
-        border: 2px solid black;
-
-        transform: rotate(0.125turn);
-        transform-origin: -50% -50%;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
+      /* Container that holds the box */
       .container {
         margin: 55px;
         width: 100vw;
         height: 80vh;
         border: 2px solid purple;
       }
+
+      /* Box element with transform applied */
+      .box {
+        height: 50px;
+        width: 50px;
+        background-color: beige;
+        border: 2px solid black;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        /* Rotate the box */
+        transform: rotate(0.125turn);
+
+        /* Change the rotation origin */
+        transform-origin: -50% -50%;
+      }
     </style>
   </head>
 
   <body>
     <div class="container">
-      <div class="box">box</div>
+      <div class="box">Box</div>
     </div>
   </body>
 </html>
