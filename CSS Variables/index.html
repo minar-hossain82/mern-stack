@@ -3,19 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Css Variables</title>
+    <title>CSS Variables Example</title>
 
     <style>
       :root {
         --color: rgb(255, 0, 247);
-        --seccolor: rgb(231, 164, 246);
-        --defpad: 23px;
-        --defop: 0.4;
+        --secondary-color: rgb(231, 164, 246);
+        --default-padding: 23px;
+        --default-opacity: 0.4;
       }
 
       * {
         margin: 0;
         padding: 0;
+        box-sizing: border-box;
       }
 
       .nav {
@@ -27,10 +28,10 @@
       }
 
       ul li {
-        opacity: var(--defop);
         list-style: none;
-        padding: var(--defpad);
-        border: 2px solid var(--seccolor);
+        padding: var(--default-padding);
+        border: 2px solid var(--secondary-color);
+        opacity: var(--default-opacity);
       }
 
       ul li:first-child {
@@ -39,7 +40,8 @@
       }
 
       .container {
-        background-color: var(--seccolor);
+        background-color: var(--secondary-color);
+        padding: 20px;
       }
     </style>
   </head>
@@ -54,7 +56,7 @@
     </div>
 
     <div class="container">
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse assumenda
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse assumenda
       qui ad dolorem consequuntur facilis aliquam. Unde sapiente ipsam quaerat,
       at debitis nesciunt, totam nulla quae ad ipsum veniam sed eligendi rem
       deserunt quos maiores modi. Illo eaque expedita natus iusto nostrum
