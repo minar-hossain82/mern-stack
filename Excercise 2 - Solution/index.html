@@ -3,8 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Styled Paragraphs</title>
+    <title>Styled Paragraph Example</title>
+
     <style>
+      /* Style all paragraphs inside a div */
       div p {
         background-color: blue;
         color: white;
@@ -12,31 +14,33 @@
         margin: 5px 0;
       }
 
+      /* Style the first paragraph inside each div */
       div p:first-child {
         background-color: yellow;
         color: red;
       }
     </style>
   </head>
+
   <body>
-    <div>
+    <div class="paragraph-container">
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
         explicabo consectetur dicta fuga ea at vitae suscipit, repellendus illum
         deleniti laboriosam ipsa distinctio.
       </p>
-      <p>I am another para</p>
-      <p>I am also another para</p>
+      <p>I am another paragraph</p>
+      <p>I am also another paragraph</p>
     </div>
 
-    <div>
+    <div class="paragraph-container">
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
         explicabo consectetur dicta fuga ea at vitae suscipit, repellendus illum
         deleniti laboriosam ipsa distinctio.
       </p>
-      <p>I am another para</p>
-      <p>I am also another para</p>
+      <p>I am another paragraph</p>
+      <p>I am also another paragraph</p>
     </div>
   </body>
 </html>
