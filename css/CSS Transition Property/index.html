@@ -6,37 +6,52 @@
     <title>CSS Transition Example</title>
 
     <style>
-      /* Container styling */
+      /* ===== Reset & Base ===== */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      /* ===== Container ===== */
       .container {
-        background-color: antiquewhite;
         width: 50vw;
         height: 40vh;
+        margin: 40px auto;
+        background-color: antiquewhite;
+
         display: flex;
         align-items: center;
         justify-content: center;
       }
 
-      /* Box styling */
+      /* ===== Box ===== */
       .box {
-        background-color: aquamarine;
         width: 5vw;
         height: 4vh;
+        background-color: aquamarine;
 
-        /* Transition properties */
+        /* Transition */
         transition: all 3s cubic-bezier(0.09, 0.5, 0, 0.99) 1s;
       }
 
-      /* Transformation state */
+      /* ===== Hover Effect ===== */
       .container:hover .box {
-        transform: translateX(10vw) translateY(10vh) scale(2);
+        transform: translate(10vw, 10vh) scale(2);
         background-color: blue;
       }
     </style>
   </head>
 
   <body>
-    <div class="container">
-      <div class="box"></div>
-    </div>
+    <main>
+      <div class="container">
+        <div class="box"></div>
+      </div>
+    </main>
   </body>
 </html>
