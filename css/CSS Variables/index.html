@@ -7,7 +7,7 @@
 
     <style>
       :root {
-        --color: rgb(255, 0, 247);
+        --primary-color: rgb(255, 0, 247);
         --secondary-color: rgb(231, 164, 246);
         --default-padding: 23px;
         --default-opacity: 0.4;
@@ -20,7 +20,7 @@
       }
 
       .nav {
-        background-color: var(--color);
+        background-color: var(--primary-color);
       }
 
       ul {
@@ -35,8 +35,8 @@
       }
 
       ul li:first-child {
-        --color: rgb(243, 87, 8);
-        background-color: var(--color, blue);
+        --primary-color: rgb(243, 87, 8);
+        background-color: var(--primary-color, blue);
       }
 
       .container {
@@ -47,20 +47,22 @@
   </head>
 
   <body>
-    <div class="nav">
+    <nav class="nav">
       <ul>
         <li>Home</li>
         <li>About</li>
         <li>Contact</li>
       </ul>
-    </div>
+    </nav>
 
-    <div class="container">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse assumenda
-      qui ad dolorem consequuntur facilis aliquam. Unde sapiente ipsam quaerat,
-      at debitis nesciunt, totam nulla quae ad ipsum veniam sed eligendi rem
-      deserunt quos maiores modi. Illo eaque expedita natus iusto nostrum
-      dolorem quos est.
-    </div>
+    <main class="container">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse assumenda
+        qui ad dolorem consequuntur facilis aliquam. Unde sapiente ipsam
+        quaerat, at debitis nesciunt, totam nulla quae ad ipsum veniam sed
+        eligendi rem deserunt quos maiores modi. Illo eaque expedita natus iusto
+        nostrum dolorem quos est.
+      </p>
+    </main>
   </body>
 </html>
