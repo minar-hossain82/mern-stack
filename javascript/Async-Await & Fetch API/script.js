@@ -1,30 +1,41 @@
-async function getData() {
-  let x = await fetch("https://jsonplaceholder.typicode.com/posts", {
-    method: "POST",
-    body: JSON.stringify({
-      title: "foo",
-      body: "bar",
-      userId: 1,
-    }),
-    headers: {
-      "Content-type": "application/json; charset=UTF-8",
-    },
-  });
+const API_URL = "https://jsonplaceholder.typicode.com/posts";
 
-  let data = await x.json();
-  return data;
+async function createPost() {
+  try {
+    const response = await fetch(API_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json; charset=UTF-8",
+      },
+      body: JSON.stringify({
+        title: "foo",
+        body: "bar",
+        userId: 1,
+      }),
+    });
+
+    if (!response.ok) {
+      throw new Error(`Request failed with status ${response.status}`);
+    }
+
+    return await response.json();
+  } catch (error) {
+    console.error("Error creating post:", error.message);
+    throw error;
+  }
 }
 
 async function main() {
-  console.log("Loading modules");
-  console.log("Do something else");
-  console.log("Load data");
+  try {
+    console.log("Fetching data...");
 
-  let data = await getData();
-  console.log(data);
+    const data = await createPost();
+    console.log("Response:", data);
 
-  console.log("process data");
-  console.log("task 2");
+    console.log("Processing complete.");
+  } catch (error) {
+    console.error("Application error:", error.message);
+  }
 }
 
 main();
