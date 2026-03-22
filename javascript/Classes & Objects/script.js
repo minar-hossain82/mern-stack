@@ -1,32 +1,32 @@
 class Animal {
   constructor(name) {
     this.name = name;
-    console.log("Object is created...");
+    console.log("Object created");
   }
 
   eats() {
-    console.log("Kha raha hoon");
+    console.log("Eating");
   }
 
   jumps() {
-    console.log("Kood raha hoon");
+    console.log("Jumping");
   }
 }
 
 class Lion extends Animal {
   constructor(name) {
     super(name);
-    console.log("Object is created and he is a lion...");
+    console.log("Object created: Lion");
   }
 
   eats() {
     super.eats();
-    console.log("Kha raha hoon roar");
+    console.log("Eating with roar");
   }
 }
 
-let a = new Animal("Bunny");
-console.log(a);
+const animal = new Animal("Bunny");
+console.log(animal);
 
-let l = new Lion("Shera");
-console.log(l);
+const lion = new Lion("Shera");
+console.log(lion);
