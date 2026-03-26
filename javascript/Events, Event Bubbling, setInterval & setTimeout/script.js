@@ -1,14 +1,21 @@
-let button = document.getElementById("btn");
+// Select button element
+const button = document.getElementById("btn");
 
+// Handle double click event
 button.addEventListener("dblclick", () => {
-  document.querySelector(".box").innerHTML =
-    "<b>Yayy you were clicked</b> Enjoy your click!";
+  const box = document.querySelector(".box");
+  if (box) {
+    box.innerHTML = "<b>Yayy you were clicked</b> Enjoy your click!";
+  }
 });
 
-button.addEventListener("contextmenu", () => {
-  alert("Don't hack us by Right click Please");
+// Prevent right-click (context menu)
+button.addEventListener("contextmenu", (e) => {
+  e.preventDefault();
+  alert("Don't hack us by right-clicking!");
 });
 
-document.addEventListener("keydown", (e) => {
-  console.log(e, e.key, e.keyCode);
+// Log key press events
+document.addEventListener("keydown", (event) => {
+  console.log("Key:", event.key, "Code:", event.keyCode);
 });
