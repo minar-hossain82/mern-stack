@@ -3,42 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Random Name Generator</title>
   </head>
   <body>
     <script>
-      let rand = Math.random();
-      let first, second, third;
-
-      if (rand < 0.33) {
-        first = "Crazy";
-      } else if (rand < 0.66) {
-        first = "Amazing";
-      } else {
-        first = "Fire";
+      function getRandom(arr) {
+        return arr[Math.floor(Math.random() * arr.length)];
       }
 
-      rand = Math.random();
+      const firstWords = ["Crazy", "Amazing", "Fire"];
+      const secondWords = ["Engine", "Foods", "Garments"];
+      const thirdWords = ["Bros", "Limited", "Hub"];
 
-      if (rand < 0.33) {
-        second = "Engine";
-      } else if (rand < 0.66) {
-        second = "Foods";
-      } else {
-        second = "Garments";
-      }
+      const name = `${getRandom(firstWords)} ${getRandom(secondWords)} ${getRandom(thirdWords)}`;
 
-      rand = Math.random();
-
-      if (rand < 0.33) {
-        third = "Bros";
-      } else if (rand < 0.66) {
-        third = "Limited";
-      } else {
-        third = "Hub";
-      }
-
-      console.log(`${first} ${second} ${third}`);
+      console.log(name);
     </script>
   </body>
 </html>
