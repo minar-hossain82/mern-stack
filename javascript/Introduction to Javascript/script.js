@@ -1,23 +1,25 @@
-alert("Hello World");
+"use strict";
 
-console.log("Code is running...");
-console.log("Code is also running...");
-console.log("Code is looking like a wow...");
+(function () {
+  alert("Hello World");
 
-var a = prompt("Enter your number");
+  console.log("Code is running...");
+  console.log("Code is also running...");
+  console.log("Code is looking like wow...");
 
-var isTrue = confirm(
-  "Are you sure you want to leave this page and blast your computer ",
-);
+  const userInput = prompt("Enter your number:");
 
-if (isTrue) {
-  console.log("Computer is blasting");
-} else {
-  console.log("Computer is not blasting");
-}
+  const isConfirmed = confirm("Are you sure you want to leave this page?");
 
-console.log("Your number is " + a);
+  if (isConfirmed) {
+    console.log("User chose to leave the page");
+  } else {
+    console.log("User stayed on the page");
+  }
 
-document.title = "Hey I am good";
+  console.log(`Your number is: ${userInput}`);
 
-// document.body.style.backgroundColor = "red";
+  document.title = "Hey I am good";
+
+  // document.body.style.backgroundColor = "red";
+})();
