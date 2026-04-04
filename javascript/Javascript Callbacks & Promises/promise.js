@@ -1,10 +1,10 @@
 console.log("This is Promises");
 
-let prom1 = new Promise((resolve, reject) => {
-  let a = Math.random();
+const prom1 = new Promise((resolve, reject) => {
+  const a = Math.random();
 
   if (a < 0.5) {
-    reject("No random number was not supporting you");
+    reject("Random number did not support you");
   } else {
     setTimeout(() => {
       console.log("Yes I am done");
@@ -13,11 +13,11 @@ let prom1 = new Promise((resolve, reject) => {
   }
 });
 
-let prom2 = new Promise((resolve, reject) => {
-  let a = Math.random();
+const prom2 = new Promise((resolve, reject) => {
+  const a = Math.random();
 
   if (a < 0.5) {
-    reject("No random number was not supporting you 2");
+    reject("Random number did not support you 2");
   } else {
     setTimeout(() => {
       console.log("Yes I am done 2");
@@ -26,10 +26,6 @@ let prom2 = new Promise((resolve, reject) => {
   }
 });
 
-let p3 = Promise.race([prom1, prom2]);
+const p3 = Promise.race([prom1, prom2]);
 
-p3.then((a) => {
-  console.log(a);
-}).catch((err) => {
-  console.log(err);
-});
+p3.then((res) => console.log(res)).catch((err) => console.log(err));
