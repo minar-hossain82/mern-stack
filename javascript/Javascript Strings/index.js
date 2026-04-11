@@ -1,6 +1,6 @@
 console.log("This is strings tutorial");
 
-let a = "Harry";
+const a = "Harry";
 
 console.log(a[0]);
 console.log(a[1]);
@@ -10,13 +10,13 @@ console.log(a[4]);
 
 console.log(a.length);
 
-let real_name = "Harry";
-let friend = "Rohan";
+const realName = "Harry";
+const friend = "Rohan";
 
-console.log("His name is " + real_name + " and his friends name is " + friend);
-console.log(`His name is ${real_name} and his friends name is ${friend}`);
+console.log("His name is " + realName + " and his friends name is " + friend);
+console.log(`His name is ${realName} and his friends name is ${friend}`);
 
-let b = "ShivamSh";
+const b = "ShivamSh";
 
 console.log(b.toUpperCase());
 console.log(b.toLowerCase());
