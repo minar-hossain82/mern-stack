@@ -1,24 +1,24 @@
-let a = prompt("Enter first number");
-let b = prompt("Enter second number");
+const firstInput = prompt("Enter first number:");
+const secondInput = prompt("Enter second number:");
 
-if (isNaN(a) || isNaN(b)) {
-  throw SyntaxError("Sorry this is not allowed");
+if (isNaN(firstInput) || isNaN(secondInput)) {
+  throw new SyntaxError("Invalid input: Please enter numeric values only.");
 }
 
-let sum = parseInt(a) + parseInt(b);
+const num1 = Number(firstInput);
+const num2 = Number(secondInput);
+const sum = num1 + num2;
 
-function main() {
-  let x = 1;
-
+function calculateSum() {
   try {
-    console.log("The sum is ", sum * x);
+    console.log("The sum is:", sum);
     return true;
   } catch (error) {
-    console.log("Error aa gaya bhai");
+    console.error("An error occurred:", error.message);
     return false;
   } finally {
-    console.log("files are being closed and db connection is being closed");
+    console.log("Cleanup complete: resources released.");
   }
 }
 
-let c = main();
+const result = calculateSum();
