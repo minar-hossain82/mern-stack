@@ -6,7 +6,10 @@
     <title>CSS Filters Demo</title>
 
     <style>
-      * {
+      /* Reset */
+      *,
+      *::before,
+      *::after {
         box-sizing: border-box;
         margin: 0;
         padding: 0;
@@ -25,6 +28,8 @@
         display: flex;
         gap: 20px;
         padding: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
       }
 
       .container img {
@@ -35,34 +40,43 @@
         transition: filter 0.3s ease;
       }
 
-      .img1 {
-        filter: brightness(122%);
+      /* Filters */
+      .img-bright {
+        filter: brightness(1.22);
       }
 
-      .img3 {
-        filter: grayscale(20%);
+      .img-gray {
+        filter: grayscale(0.2);
+      }
+
+      /* Optional hover effect */
+      .container img:hover {
+        filter: none;
       }
     </style>
   </head>
 
   <body>
-    <div class="container">
+    <main class="container">
       <img
-        class="img1"
-        src="https://img.freepik.com/free-photo/programming-background-with-person-working-with-codes-computer_23-2150010125.jpg?size=626&ext=jpg"
-        alt="Person programming on computer"
+        class="img-bright"
+        src="https://img.freepik.com/free-photo/programming-background-with-person-working-with-codes-computer_23-2150010125.jpg"
+        alt="Person programming on a computer"
+        loading="lazy"
       />
 
       <img
         src="https://c.ndtvimg.com/2023-09/154fgjlg_shah-rukh-khan-_625x300_23_September_23.jpg"
-        alt="Shah Rukh Khan"
+        alt="Shah Rukh Khan portrait"
+        loading="lazy"
       />
 
       <img
-        class="img3"
+        class="img-gray"
         src="https://images.hindustantimes.com/img/2022/11/12/550x309/akshay_kumar_1659860706633_1668255913307_1668255913307.jpg"
-        alt="Akshay Kumar"
+        alt="Akshay Kumar portrait"
+        loading="lazy"
       />
-    </div>
+    </main>
   </body>
 </html>
