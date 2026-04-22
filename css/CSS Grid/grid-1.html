@@ -6,51 +6,59 @@
     <title>CSS Grid Layout</title>
 
     <style>
+      /* Reset */
       * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
       }
 
+      /* Body styling */
       body {
         font-family: Arial, Helvetica, sans-serif;
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100vh;
+        min-height: 100vh;
       }
 
+      /* Grid container */
       .container {
         width: 80vw;
         height: 80vh;
         border: 2px solid #000;
+
         display: grid;
         grid-template-columns: repeat(4, 80px);
         grid-template-rows: repeat(2, 80px);
         gap: 10px 44px;
+
         justify-items: center;
         align-items: center;
       }
 
+      /* Grid items */
       .item {
         width: 55px;
         height: 55px;
         border: 2px solid red;
+
         display: flex;
         justify-content: center;
         align-items: center;
+
         font-weight: bold;
       }
     </style>
   </head>
 
   <body>
-    <div class="container">
-      <div class="item item-1">1</div>
-      <div class="item item-2">2</div>
-      <div class="item item-3">3</div>
-      <div class="item item-4">4</div>
-      <div class="item item-5">5</div>
-    </div>
+    <main class="container">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+    </main>
   </body>
 </html>
