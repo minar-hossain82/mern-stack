@@ -7,7 +7,7 @@
 
     <style>
       :root {
-        --primary-color: rgb(255, 0, 247);
+        --primary-color: rgb(0, 128, 255); /* changed */
         --secondary-color: rgb(231, 164, 246);
         --default-padding: 23px;
         --default-opacity: 0.4;
@@ -32,6 +32,16 @@
         padding: var(--default-padding);
         border: 2px solid var(--secondary-color);
         opacity: var(--default-opacity);
+        border-radius: 8px; /* added */
+        transition: all 0.3s ease; /* smooth effect */
+      }
+
+      /* NEW hover effect */
+      ul li:hover {
+        background-color: black;
+        color: white;
+        cursor: pointer;
+        opacity: 1;
       }
 
       ul li:first-child {
@@ -42,6 +52,8 @@
       .container {
         background-color: var(--secondary-color);
         padding: 20px;
+        border-radius: 10px; /* added */
+        margin: 20px;
       }
     </style>
   </head>
