@@ -9,9 +9,12 @@
     />
     <title>CSS MultiColor Website</title>
 
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap");
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
 
+    <style>
       :root {
         --primary-color: #061872cc;
         --secondary-color: #6ea5fccc;
@@ -35,16 +38,15 @@
 
       nav {
         background-color: var(--primary-color);
-        padding: 12px 0;
       }
 
       nav ul {
-        text-align: center;
+        display: flex;
+        justify-content: center;
+        list-style: none;
       }
 
       nav ul li {
-        list-style: none;
-        display: inline-block;
         padding: 15px 20px;
         font-weight: 500;
       }
@@ -52,11 +54,14 @@
       nav ul li a {
         color: var(--text-color);
         text-decoration: none;
-        transition: opacity 0.3s ease;
+        transition:
+          opacity 0.3s ease,
+          transform 0.2s ease;
       }
 
       nav ul li a:hover {
         opacity: 0.7;
+        transform: translateY(-2px);
       }
     </style>
   </head>
@@ -65,10 +70,10 @@
     <header>
       <nav>
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Contact Us</a></li>
+          <li><a href="#" aria-label="Home">Home</a></li>
+          <li><a href="#" aria-label="About">About</a></li>
+          <li><a href="#" aria-label="Services">Services</a></li>
+          <li><a href="#" aria-label="Contact Us">Contact Us</a></li>
         </ul>
       </nav>
     </header>
