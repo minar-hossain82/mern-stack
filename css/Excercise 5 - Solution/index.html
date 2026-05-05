@@ -5,15 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Layout</title>
+
     <style>
+        /* Reset default spacing */
         * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
 
+        /* Sticky header */
         header {
             position: sticky;
             top: 0;
+            z-index: 1000;
         }
 
         nav {
@@ -34,31 +39,33 @@
             text-align: center;
         }
 
-        .box1 {
-            background-color: palevioletred;
+        .box1,
+        .box2 {
             height: 70vh;
             width: 45%;
             display: inline-block;
             margin: 0 12px;
         }
 
+        .box1 {
+            background-color: palevioletred;
+        }
+
         .box2 {
             background-color: blue;
-            height: 70vh;
-            width: 45%;
-            display: inline-block;
-            margin: 0 12px;
         }
 
         .text-box {
             padding: 34px;
             border: 2px solid white;
-            margin: 50px 34vw;
+            margin: 50px auto;
+            width: fit-content;
             font-size: 2em;
             border-radius: 13px;
-
+            text-align: center;
         }
 
+        /* Floating button */
         .orange-box {
             height: 32px;
             width: 32px;
@@ -66,7 +73,7 @@
             position: fixed;
             bottom: 12px;
             right: 23px;
-            border-radius: 60px;
+            border-radius: 50%;
         }
 
         footer {
@@ -77,30 +84,29 @@
 </head>
 
 <body>
-    <header>
-        <nav>
 
-        </nav>
+    <!-- Header -->
+    <header>
+        <nav></nav>
     </header>
 
+    <!-- Main Content -->
     <main>
-        <div class="container">
+        <section class="container">
             <div class="box1"></div>
             <div class="box2"></div>
-        </div>
+        </section>
 
-        <div class="text-box">
+        <section class="text-box">
             <p>Welcome to Sigma Web Development Express</p>
-        </div>
+        </section>
 
-        <div class="orange-box">
-
-        </div>
+        <div class="orange-box"></div>
     </main>
 
-    <footer>
+    <!-- Footer -->
+    <footer></footer>
 
-    </footer>
 </body>
 
 </html>
