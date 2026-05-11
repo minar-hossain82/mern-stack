@@ -1,19 +1,22 @@
 "use strict";
 
-const a1 = 6;
-console.log(a1);
-
-const sleep = async (ms = 1000) =>
-  new Promise((resolve) => {
+const sleep = async (ms = 1000) => {
+  return new Promise((resolve) => {
     setTimeout(() => {
       resolve(45);
     }, ms);
   });
+};
 
-const sum = async (a, b, c) => a + b + c;
+const sum = async (a, b, c) => {
+  return a + b + c;
+};
 
 async function main() {
   try {
+    const number = 6;
+    console.log(number);
+
     const obj = {
       a: 1,
       b: 2,
@@ -23,10 +26,13 @@ async function main() {
     const { a, b } = obj;
     console.log(a, b);
 
-    const arr = [1, 4, 6];
+    const numbers = [1, 4, 6];
 
-    console.log(await sum(arr[0], arr[1], arr[2]));
-    console.log(await sum(...arr));
+    const result1 = await sum(numbers[0], numbers[1], numbers[2]);
+    const result2 = await sum(...numbers);
+
+    console.log(result1);
+    console.log(result2);
 
     // const sleepResult = await sleep();
     // console.log(sleepResult);
