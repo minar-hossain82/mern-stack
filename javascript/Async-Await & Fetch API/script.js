@@ -1,17 +1,15 @@
+"use strict";
+
 const API_URL = "https://jsonplaceholder.typicode.com/posts";
 
-async function createPost() {
+const createPost = async (postData) => {
   try {
     const response = await fetch(API_URL, {
       method: "POST",
       headers: {
         "Content-Type": "application/json; charset=UTF-8",
       },
-      body: JSON.stringify({
-        title: "foo",
-        body: "bar",
-        userId: 1,
-      }),
+      body: JSON.stringify(postData),
     });
 
     if (!response.ok) {
@@ -23,19 +21,27 @@ async function createPost() {
     console.error("Error creating post:", error.message);
     throw error;
   }
-}
+};
 
-async function main() {
+const main = async () => {
   try {
-    console.log("Fetching data...");
+    console.log("Creating post...");
 
-    const data = await createPost();
-    console.log("Response:", data);
+    const postPayload = {
+      title: "foo",
+      body: "bar",
+      userId: 1,
+    };
+
+    const createdPost = await createPost(postPayload);
+
+    console.log("Post created successfully:");
+    console.log(createdPost);
 
     console.log("Processing complete.");
   } catch (error) {
     console.error("Application error:", error.message);
   }
-}
+};
 
 main();
