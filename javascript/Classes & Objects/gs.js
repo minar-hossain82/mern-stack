@@ -8,10 +8,11 @@ class User {
   }
 
   set name(value) {
-    if (typeof value !== "string" || value.length < 4) {
+    if (typeof value !== "string" || value.trim().length < 4) {
       throw new Error("Name must be a string with at least 4 characters.");
     }
-    this._name = value;
+
+    this._name = value.trim();
   }
 }
 
