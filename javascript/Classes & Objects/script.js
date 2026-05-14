@@ -1,32 +1,38 @@
+"use strict";
+
 class Animal {
   constructor(name) {
     this.name = name;
-    console.log("Object created");
+    console.log(`${this.name} created`);
   }
 
   eats() {
-    console.log("Eating");
+    console.log(`${this.name} is eating`);
   }
 
   jumps() {
-    console.log("Jumping");
+    console.log(`${this.name} is jumping`);
   }
 }
 
 class Lion extends Animal {
   constructor(name) {
     super(name);
-    console.log("Object created: Lion");
+    console.log(`Lion ${this.name} created`);
   }
 
   eats() {
     super.eats();
-    console.log("Eating with roar");
+    console.log(`${this.name} is eating with a roar`);
   }
 }
 
 const animal = new Animal("Bunny");
-console.log(animal);
+animal.eats();
+animal.jumps();
+
+console.log("----------------");
 
 const lion = new Lion("Shera");
-console.log(lion);
+lion.eats();
+lion.jumps();
