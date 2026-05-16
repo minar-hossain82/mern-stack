@@ -6,13 +6,24 @@
     <title>Event Bubbling Demo</title>
 
     <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+
       .container {
         background-color: rgb(227, 227, 28);
         padding: 14px;
         margin: 14px;
       }
 
-      .childContainer {
+      .child-container {
         background-color: beige;
         padding: 14px;
         margin: 14px;
@@ -30,24 +41,24 @@
 
   <body>
     <div class="container">
-      <section class="childContainer">
+      <section class="child-container">
         <div class="child">I am a child</div>
       </section>
     </div>
 
     <script>
       const child = document.querySelector(".child");
-      const childContainer = document.querySelector(".childContainer");
+      const childContainer = document.querySelector(".child-container");
       const container = document.querySelector(".container");
 
-      child.addEventListener("click", (e) => {
-        e.stopPropagation();
+      child.addEventListener("click", (event) => {
+        event.stopPropagation();
         alert("Child was clicked");
       });
 
-      childContainer.addEventListener("click", (e) => {
-        e.stopPropagation();
-        alert("ChildContainer was clicked");
+      childContainer.addEventListener("click", (event) => {
+        event.stopPropagation();
+        alert("Child container was clicked");
       });
 
       container.addEventListener("click", () => {
@@ -58,14 +69,15 @@
         const r = Math.floor(Math.random() * 256);
         const g = Math.floor(Math.random() * 256);
         const b = Math.floor(Math.random() * 256);
+
         return `rgb(${r}, ${g}, ${b})`;
       };
 
       const timeoutId = setTimeout(() => {
-        childContainer.style.background = getRandomColor();
+        childContainer.style.backgroundColor = getRandomColor();
       }, 5000);
 
-      console.log(timeoutId);
+      console.log("Timeout ID:", timeoutId);
     </script>
   </body>
 </html>
