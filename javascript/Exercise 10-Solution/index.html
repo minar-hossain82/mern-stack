@@ -5,19 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Random Name Generator</title>
   </head>
+
   <body>
     <script>
-      function getRandom(arr) {
-        return arr[Math.floor(Math.random() * arr.length)];
-      }
+      const getRandomItem = (array) => {
+        return array[Math.floor(Math.random() * array.length)];
+      };
 
       const firstWords = ["Crazy", "Amazing", "Fire"];
       const secondWords = ["Engine", "Foods", "Garments"];
       const thirdWords = ["Bros", "Limited", "Hub"];
 
-      const name = `${getRandom(firstWords)} ${getRandom(secondWords)} ${getRandom(thirdWords)}`;
+      const companyName = `${getRandomItem(firstWords)} ${getRandomItem(
+        secondWords,
+      )} ${getRandomItem(thirdWords)}`;
 
-      console.log(name);
+      console.log(companyName);
     </script>
   </body>
 </html>
