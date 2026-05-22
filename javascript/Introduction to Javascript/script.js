@@ -1,6 +1,6 @@
 "use strict";
 
-(function () {
+(() => {
   alert("Hello World");
 
   console.log("Code is running...");
