@@ -1,30 +1,39 @@
 console.log("Harry is a hacker");
-console.log("Rohan is a hecker");
+console.log("Rohan is a hacker");
 
 setTimeout(() => {
-  console.log("I am inside settimeout");
+  console.log("I am inside setTimeout");
 }, 0);
 
 setTimeout(() => {
-  console.log("I am inside settimeout 2");
+  console.log("I am inside setTimeout 2");
 }, 0);
 
 console.log("The End");
 
-const fn = () => {
+const logMessage = () => {
   console.log("Nothing");
 };
 
-const callback = (arg, fn) => {
-  console.log(arg);
+const callback = (name, fn) => {
+  console.log(name);
   fn();
 };
 
 const loadScript = (src, callback) => {
-  let sc = document.createElement("script");
-  sc.src = src;
-  sc.onload = () => callback("Harry", fn);
-  document.head.append(sc);
+  const script = document.createElement("script");
+
+  script.src = src;
+
+  script.onload = () => {
+    callback("Harry", logMessage);
+  };
+
+  script.onerror = () => {
+    console.error(`Failed to load script: ${src}`);
+  };
+
+  document.head.appendChild(script);
 };
 
 loadScript(
