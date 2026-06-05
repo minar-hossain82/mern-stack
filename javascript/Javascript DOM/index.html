@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Boxes & Table</title>
+    <title>Boxes and Table</title>
 
     <style>
       * {
@@ -13,8 +13,8 @@
       }
 
       body {
-        font-family: Arial, sans-serif;
         padding: 20px;
+        font-family: Arial, sans-serif;
       }
 
       .container {
@@ -24,25 +24,25 @@
       }
 
       .box {
-        height: 45px;
-        width: 56px;
-        border: 2px solid black;
-        padding: 5px;
         display: flex;
         align-items: center;
         justify-content: center;
+        width: 56px;
+        height: 45px;
+        padding: 5px;
+        border: 2px solid #000;
       }
 
       table {
-        border-collapse: collapse;
         width: 200px;
+        border-collapse: collapse;
       }
 
       th,
       td {
-        border: 1px solid black;
         padding: 8px;
         text-align: left;
+        border: 1px solid #000;
       }
 
       th {
@@ -50,31 +50,30 @@
       }
     </style>
   </head>
-
   <body>
-    <div class="container">
-      <div class="box">Box1</div>
-      <div class="box">Box2</div>
-      <div class="box">Box3</div>
-      <div class="box">Box4</div>
-      <div class="box">Box5</div>
-    </div>
+    <main>
+      <div class="container">
+        <div class="box">Box1</div>
+        <div class="box">Box2</div>
+        <div class="box">Box3</div>
+        <div class="box">Box4</div>
+        <div class="box">Box5</div>
+      </div>
 
-    <table>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Age</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Harry</td>
-          <td>100</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <script src="script.js"></script>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Age</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Harry</td>
+            <td>100</td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
   </body>
 </html>
