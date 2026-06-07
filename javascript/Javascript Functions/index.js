@@ -1,27 +1,26 @@
-function nice(name) {
+function greetUser(name) {
   console.log(`Hey ${name}, you are nice!`);
   console.log(`Hey ${name}, you are good!`);
   console.log(`Hey ${name}, your t-shirt is nice!`);
   console.log(`Hey ${name}, your course is good too!`);
 }
 
-function sum(a, b, c = 3) {
-  console.log("Inputs:", a, b, c);
+function calculateSum(a, b, c = 3) {
   return a + b + c;
 }
 
-const result1 = sum(3, 2);
-const result2 = sum(7, 5);
-const result3 = sum(3, 13, 1);
+const sum1 = calculateSum(3, 2);
+const sum2 = calculateSum(7, 5);
+const sum3 = calculateSum(3, 13, 1);
 
-console.log("The sum of these numbers is:", result1);
-console.log("The sum of these numbers is:", result2);
-console.log("The sum of these numbers is:", result3);
+console.log(`Sum 1: ${sum1}`);
+console.log(`Sum 2: ${sum2}`);
+console.log(`Sum 3: ${sum3}`);
 
-const func1 = (x) => {
-  console.log("I am an arrow function:", x);
+const printValue = (value) => {
+  console.log(`I am an arrow function: ${value}`);
 };
 
-func1(34);
-func1(66);
-func1(84);
+printValue(34);
+printValue(66);
+printValue(84);
