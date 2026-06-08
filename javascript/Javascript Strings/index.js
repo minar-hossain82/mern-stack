@@ -1,32 +1,36 @@
-console.log("This is strings tutorial");
+console.log("=== Strings Tutorial ===");
 
-const a = "Harry";
+const name = "Harry";
 
-console.log(a[0]);
-console.log(a[1]);
-console.log(a[2]);
-console.log(a[3]);
-console.log(a[4]);
+console.log("First Character:", name[0]);
+console.log("Second Character:", name[1]);
+console.log("Third Character:", name[2]);
+console.log("Fourth Character:", name[3]);
+console.log("Fifth Character:", name[4]);
 
-console.log(a.length);
+console.log("Length:", name.length);
 
 const realName = "Harry";
 const friend = "Rohan";
 
-console.log("His name is " + realName + " and his friends name is " + friend);
-console.log(`His name is ${realName} and his friends name is ${friend}`);
+console.log("His name is " + realName + " and his friend's name is " + friend);
 
-const b = "ShivamSh";
+console.log(`His name is ${realName} and his friend's name is ${friend}`);
 
-console.log(b.toUpperCase());
-console.log(b.toLowerCase());
-console.log(b.length);
+const text = "ShivamSh";
 
-console.log(b.slice(1, 5));
-console.log(b.slice(1));
+console.log("Uppercase:", text.toUpperCase());
+console.log("Lowercase:", text.toLowerCase());
+console.log("Length:", text.length);
 
-console.log(b.replace("Sh", "77"));
+console.log("Slice (1, 5):", text.slice(1, 5));
+console.log("Slice (1):", text.slice(1));
 
-console.log(b.concat(a, "Aishwariya", "Rahul", "Priya"));
+console.log("Replace 'Sh' with '77':", text.replace("Sh", "77"));
 
-console.log(b);
+console.log(
+  "Concatenated String:",
+  text.concat(name, "Aishwariya", "Rahul", "Priya"),
+);
+
+console.log("Original String:", text);
