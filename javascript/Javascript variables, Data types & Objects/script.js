@@ -1,36 +1,44 @@
-console.log("Tutorial 55: JavaScript Variables");
+console.log("JavaScript Variables and Data Types");
 
 let a = 5;
 let b = 6;
 let c = "Harry";
-let _a = "Shubham";
+let alternateName = "Shubham";
 
 {
-  console.log(a);
+  console.log("Inside block:", a);
 }
 
-console.log(a);
+console.log("Outside block:", a);
 
-let x = "Harry bhai";
-let y = 22;
-let z = 3.55;
-const p = true;
-let q;
-let r = null;
+let name = "Harry Bhai";
+let age = 22;
+let height = 3.55;
+const isStudent = true;
+let undefinedValue;
+let nullValue = null;
 
-console.log(x, y, z, p, q, r);
-console.log(typeof x, typeof y, typeof z, typeof p, typeof q, typeof r);
+console.log(name, age, height, isStudent, undefinedValue, nullValue);
 
-let o = {
+console.log(
+  typeof name,
+  typeof age,
+  typeof height,
+  typeof isStudent,
+  typeof undefinedValue,
+  typeof nullValue,
+);
+
+let person = {
   name: "Harry",
   jobCode: 5600,
   isHandsome: true,
 };
 
-console.log(o);
+console.log(person);
 
-o.salary = "100crores";
-console.log(o);
+person.salary = "100 Crores";
+console.log(person);
 
-o.salary = "500crores";
-console.log(o);
+person.salary = "500 Crores";
+console.log(person);
