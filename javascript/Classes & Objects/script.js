@@ -6,11 +6,11 @@ class Animal {
     console.log(`${this.name} created`);
   }
 
-  eats() {
+  eat() {
     console.log(`${this.name} is eating`);
   }
 
-  jumps() {
+  jump() {
     console.log(`${this.name} is jumping`);
   }
 }
@@ -21,18 +21,18 @@ class Lion extends Animal {
     console.log(`Lion ${this.name} created`);
   }
 
-  eats() {
-    super.eats();
+  eat() {
+    super.eat();
     console.log(`${this.name} is eating with a roar`);
   }
 }
 
-const animal = new Animal("Bunny");
-animal.eats();
-animal.jumps();
+const bunny = new Animal("Bunny");
+bunny.eat();
+bunny.jump();
 
 console.log("----------------");
 
 const lion = new Lion("Shera");
-lion.eats();
-lion.jumps();
+lion.eat();
+lion.jump();
