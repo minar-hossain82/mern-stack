@@ -51,6 +51,14 @@
       const childContainer = document.querySelector(".child-container");
       const container = document.querySelector(".container");
 
+      const generateRandomColor = () => {
+        const r = Math.floor(Math.random() * 256);
+        const g = Math.floor(Math.random() * 256);
+        const b = Math.floor(Math.random() * 256);
+
+        return `rgb(${r}, ${g}, ${b})`;
+      };
+
       child.addEventListener("click", (event) => {
         event.stopPropagation();
         alert("Child was clicked");
@@ -65,16 +73,8 @@
         alert("Container was clicked");
       });
 
-      const getRandomColor = () => {
-        const r = Math.floor(Math.random() * 256);
-        const g = Math.floor(Math.random() * 256);
-        const b = Math.floor(Math.random() * 256);
-
-        return `rgb(${r}, ${g}, ${b})`;
-      };
-
       const timeoutId = setTimeout(() => {
-        childContainer.style.backgroundColor = getRandomColor();
+        childContainer.style.backgroundColor = generateRandomColor();
       }, 5000);
 
       console.log("Timeout ID:", timeoutId);
