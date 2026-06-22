@@ -1,17 +1,22 @@
 const button = document.getElementById("btn");
+const box = document.querySelector(".box");
 
-button.addEventListener("dblclick", () => {
-  const box = document.querySelector(".box");
-  if (box) {
-    box.innerHTML = "<b>Yayy you were clicked</b> Enjoy your click!";
-  }
-});
+if (button) {
+  button.addEventListener("dblclick", () => {
+    if (!box) return;
 
-button.addEventListener("contextmenu", (e) => {
-  e.preventDefault();
-  alert("Don't hack us by right-clicking!");
-});
+    box.innerHTML = `
+      <b>Yayy! You were clicked.</b>
+      Enjoy your click!
+    `;
+  });
+
+  button.addEventListener("contextmenu", (event) => {
+    event.preventDefault();
+    alert("Don't hack us by right-clicking!");
+  });
+}
 
 document.addEventListener("keydown", (event) => {
-  console.log("Key:", event.key, "Code:", event.keyCode);
+  console.log(`Key: ${event.key}, Code: ${event.keyCode}`);
 });
