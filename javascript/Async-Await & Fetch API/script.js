@@ -2,28 +2,43 @@
 
 const API_URL = "https://jsonplaceholder.typicode.com/posts";
 
-const DEFAULT_HEADERS = {
-  "Content-Type": "application/json; charset=UTF-8",
-};
+const HTTP_METHOD = Object.freeze({
+  POST: "POST",
+});
 
+const DEFAULT_HEADERS = Object.freeze({
+  "Content-Type": "application/json; charset=UTF-8",
+});
+
+/**
+ * Validate post payload.
+ * @param {Object} payload
+ */
 function validatePostPayload(payload) {
   if (!payload || typeof payload !== "object") {
     throw new TypeError("Post payload must be an object.");
   }
 
-  if (typeof payload.title !== "string" || payload.title.trim() === "") {
+  const { title, body, userId } = payload;
+
+  if (typeof title !== "string" || title.trim().length === 0) {
     throw new TypeError("Post title must be a non-empty string.");
   }
 
-  if (typeof payload.body !== "string" || payload.body.trim() === "") {
+  if (typeof body !== "string" || body.trim().length === 0) {
     throw new TypeError("Post body must be a non-empty string.");
   }
 
-  if (!Number.isInteger(payload.userId) || payload.userId <= 0) {
+  if (!Number.isInteger(userId) || userId <= 0) {
     throw new TypeError("userId must be a positive integer.");
   }
 }
 
+/**
+ * Create a new post.
+ * @param {Object} postData
+ * @returns {Promise<Object>}
+ */
 async function createPost(postData) {
   validatePostPayload(postData);
 
@@ -31,7 +46,7 @@ async function createPost(postData) {
 
   try {
     response = await fetch(API_URL, {
-      method: "POST",
+      method: HTTP_METHOD.POST,
       headers: DEFAULT_HEADERS,
       body: JSON.stringify(postData),
     });
@@ -45,7 +60,11 @@ async function createPost(postData) {
     );
   }
 
-  return response.json();
+  try {
+    return await response.json();
+  } catch {
+    throw new Error("Failed to parse API response.");
+  }
 }
 
 async function main() {
@@ -68,4 +87,4 @@ async function main() {
   }
 }
 
-main();
+void main();
