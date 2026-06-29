@@ -12,11 +12,17 @@ class User {
   }
 
   set name(value) {
-    if (typeof value !== "string" || value.trim().length < 4) {
-      throw new Error("Name must be a string with at least 4 characters.");
+    if (typeof value !== "string") {
+      throw new TypeError("Name must be a string.");
     }
 
-    this.#name = value.trim();
+    const trimmedName = value.trim();
+
+    if (trimmedName.length < 4) {
+      throw new Error("Name must contain at least 4 characters.");
+    }
+
+    this.#name = trimmedName;
   }
 }
 
