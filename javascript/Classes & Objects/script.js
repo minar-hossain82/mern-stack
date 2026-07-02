@@ -28,11 +28,13 @@ class Lion extends Animal {
 }
 
 const bunny = new Animal("Bunny");
+
 bunny.eat();
 bunny.jump();
 
 console.log("----------------");
 
 const lion = new Lion("Shera");
+
 lion.eat();
 lion.jump();
